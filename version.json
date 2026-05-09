@@ -1,0 +1,14 @@
+{
+  "version": "2026.0.0",
+  "major": "2026",
+  "released_at": "2026-05-15T00:00:00Z",
+  "downloads": {
+    "mac-arm64": "https://github.com/Retirology/Retirology-App/releases/download/v2026.0.0/Retirology-2026.0.0-arm64.dmg",
+    "mac-x64":   "https://github.com/Retirology/Retirology-App/releases/download/v2026.0.0/Retirology-2026.0.0-x64.dmg",
+    "win-x64":   "https://github.com/Retirology/Retirology-App/releases/download/v2026.0.0/Retirology-Setup-2026.0.0.exe",
+    "linux-x64": "https://github.com/Retirology/Retirology-App/releases/download/v2026.0.0/Retirology-2026.0.0.AppImage"
+  },
+  "major_upgrade_url":       "https://retirology.app/#download",
+  "minor_update_portal_url": "https://retirology.lemonsqueezy.com/billing",
+  "release_notes_url":       "https://retirology.app/changelog.html#v2026-0"
+}

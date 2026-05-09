@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Page not found — Retirology</title>
+  <meta name="description" content="The page you're looking for doesn't exist." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { red: '#dc2626', amber: '#f59e0b', green: '#16a34a' } },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="styles/custom.css" />
+</head>
+<body class="bg-white text-slate-900 min-h-screen flex flex-col">
+
+  <header class="border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Retirology home">
+        <img src="assets/logo.png" alt="" width="32" height="32" class="rounded-full" />
+        <span class="font-bold text-lg tracking-tight">Retirology</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Primary">
+        <a href="index.html#features"  class="hover:text-slate-900">Features</a>
+        <a href="index.html#privacy"   class="hover:text-slate-900">Privacy</a>
+        <a href="index.html#pricing"   class="hover:text-slate-900">Pricing</a>
+        <a href="download.html" class="hover:text-slate-900">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 hero-halo">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 py-20 sm:py-28 text-center">
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">404</p>
+      <h1 class="mt-3 text-5xl sm:text-6xl font-extrabold tracking-tight">
+        <span class="brand-gradient-text">Off-plan.</span>
+      </h1>
+      <p class="mt-5 text-lg text-slate-600 max-w-xl mx-auto">
+        That page isn't in the model. It might have moved, the link might be wrong, or it never existed in the first place.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white font-semibold px-5 py-3 hover:bg-slate-800 transition">
+          Back to home
+        </a>
+        <a href="index.html#features" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white text-slate-900 font-semibold px-5 py-3 hover:bg-slate-50 transition">
+          See features
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
+        <span class="font-bold tracking-tight">Retirology</span>
+        <span class="text-slate-500 text-sm">© 2026</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600" aria-label="Footer">
+        <a href="privacy.html"   class="hover:text-slate-900">Privacy</a>
+        <a href="changelog.html" class="hover:text-slate-900">Changelog</a>
+        <a href="download.html"  class="hover:text-slate-900">Download</a>
+        <a href="https://github.com/Retirology/Retirology-App" class="hover:text-slate-900">GitHub</a>
+        <a href="mailto:retirology.app@gmail.com" class="hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

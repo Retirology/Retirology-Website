@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Changelog — Retirology</title>
+  <meta name="description" content="Release notes for Retirology." />
+  <link rel="canonical" href="https://retirology.app/changelog.html" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Changelog — Retirology" />
+  <meta property="og:description" content="Release notes for Retirology." />
+  <meta property="og:url" content="https://retirology.app/changelog.html" />
+  <meta property="og:image" content="https://retirology.app/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://retirology.app/assets/og-image.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { red: '#dc2626', amber: '#f59e0b', green: '#16a34a' } },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="styles/custom.css" />
+</head>
+<body class="bg-white text-slate-900">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded-md focus:shadow">Skip to content</a>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/85 border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Retirology home">
+        <img src="assets/logo.png" alt="" width="32" height="32" class="rounded-full" />
+        <span class="font-bold text-lg tracking-tight">Retirology</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Primary">
+        <a href="index.html#features"  class="hover:text-slate-900">Features</a>
+        <a href="index.html#privacy"   class="hover:text-slate-900">Privacy</a>
+        <a href="index.html#pricing"   class="hover:text-slate-900">Pricing</a>
+        <a href="download.html" class="hover:text-slate-900">Download</a>
+      </nav>
+      <a href="index.html#pricing" class="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 text-white text-sm font-semibold px-3.5 py-2 hover:bg-slate-800 transition">Buy</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-halo">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 pt-14 sm:pt-20 pb-8">
+        <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Release notes</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">Changelog</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl">
+          Each entry corresponds to a version published to GitHub Releases. Mid-year patch releases are free for that year's customers.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-14">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 prose-rt">
+
+        <article id="v2026-0" class="scroll-mt-24">
+          <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
+            <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">2026.0</h2>
+            <span class="text-sm text-slate-500">Released 2026-05-15</span>
+            <span class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">Initial release</span>
+          </div>
+
+          <p class="mt-5">
+            First public release of Retirology. The full feature list lives in the
+            <a href="https://github.com/Retirology/Retirology-App/blob/main/README.md">app README</a>;
+            the highlights:
+          </p>
+
+          <ul>
+            <li>Path-to-FI accumulation projections across taxable, traditional, Roth, and HSA buckets, with employer match, HSA tax credit, and inflation-adjusted figures.</li>
+            <li>Drawdown planner with four Roth conversion ladder modes, ACA premium-subsidy optimization, SEPP 72(t) carve-outs, RMD modeling, Social Security claim-age strategies, and full state + locality income tax (51 states plus NYC, Detroit, and Maryland counties).</li>
+            <li>Monte Carlo simulator with both normal-distribution sampling and historical bootstrap mode using a bundled 1928–2024 dataset (S&amp;P 500, 10-yr Treasury, T-bills, CPI).</li>
+            <li>Deterministic stress tests against the 1929, 1973–74, 2000, 2008, and 2022 sequences.</li>
+            <li>Plan analysis with rule-based recommendations and a cross-strategy optimizer for one-click apply.</li>
+            <li>Sankey cash-flow diagram for the drawdown phase.</li>
+            <li>Side-by-side multi-scenario comparison.</li>
+            <li>Local SQLite storage. No accounts, no telemetry, one update-check network call per launch.</li>
+          </ul>
+
+          <p class="text-sm text-slate-500">
+            Downloads:
+            <a href="https://github.com/Retirology/Retirology-App/releases/tag/v2026.0">GitHub Releases v2026.0</a>
+            ·
+            Build instructions:
+            <a href="https://github.com/Retirology/Retirology-App/blob/main/README.md">README</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
+        <span class="font-bold tracking-tight">Retirology</span>
+        <span class="text-slate-500 text-sm">© 2026</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600" aria-label="Footer">
+        <a href="privacy.html"   class="hover:text-slate-900">Privacy</a>
+        <a href="changelog.html" class="hover:text-slate-900">Changelog</a>
+        <a href="download.html"  class="hover:text-slate-900">Download</a>
+        <a href="https://github.com/Retirology/Retirology-App" class="hover:text-slate-900">GitHub</a>
+        <a href="mailto:retirology.app@gmail.com" class="hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

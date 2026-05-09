@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Privacy — Retirology</title>
+  <meta name="description" content="The full Retirology privacy statement. Local-only data storage, no accounts, no telemetry, no analytics, source code public for audit." />
+  <link rel="canonical" href="https://retirology.app/privacy.html" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy — Retirology" />
+  <meta property="og:description" content="Local-only. No accounts. No telemetry. Source public." />
+  <meta property="og:url" content="https://retirology.app/privacy.html" />
+  <meta property="og:image" content="https://retirology.app/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://retirology.app/assets/og-image.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { red: '#dc2626', amber: '#f59e0b', green: '#16a34a' } },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="styles/custom.css" />
+</head>
+<body class="bg-white text-slate-900">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded-md focus:shadow">Skip to content</a>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/85 border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Retirology home">
+        <img src="assets/logo.png" alt="" width="32" height="32" class="rounded-full" />
+        <span class="font-bold text-lg tracking-tight">Retirology</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Primary">
+        <a href="index.html#features"  class="hover:text-slate-900">Features</a>
+        <a href="privacy.html" class="text-slate-900">Privacy</a>
+        <a href="index.html#pricing"   class="hover:text-slate-900">Pricing</a>
+        <a href="download.html" class="hover:text-slate-900">Download</a>
+      </nav>
+      <a href="index.html#pricing" class="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 text-white text-sm font-semibold px-3.5 py-2 hover:bg-slate-800 transition">Buy</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-halo">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 pt-14 sm:pt-20 pb-8">
+        <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Privacy statement</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">Privacy</h1>
+        <p class="mt-4 text-slate-500 text-sm">Last updated: 2026-05-09</p>
+        <p class="mt-6 text-lg text-slate-700 leading-relaxed">
+          Retirology is a desktop application. It runs entirely on your computer. We don't operate servers that store your financial data, because there is no transmission to a server in the first place. This page explains exactly what that means in practice, what the single network request the app makes does, and what to do if you find anything that contradicts this statement.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-14">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 prose-rt">
+
+        <h2>Summary</h2>
+        <ul>
+          <li>Every input you enter — accounts, balances, salaries, scenarios — lives on your machine in a single SQLite file.</li>
+          <li>The app makes one network request, once per launch: a fetch of <span class="kbd">https://retirology.app/version.json</span> to check for updates. It sends nothing about you.</li>
+          <li>There are no user accounts, no telemetry, no analytics, no crash reporting, no third-party SDKs. Not in the app, not on this website.</li>
+          <li>The source code is published. You can read it, audit it, or compile your own binary from it.</li>
+        </ul>
+
+        <h2>Where your data lives</h2>
+        <p>Your plan, your accounts, your assumptions — everything you enter — is stored in a single SQLite database on your local disk. The app reads and writes to that one file; nothing goes anywhere else.</p>
+        <ul>
+          <li><strong>macOS:</strong> <span class="kbd">~/Library/Application Support/Retirology/retirology.db</span></li>
+          <li><strong>Windows:</strong> <span class="kbd">%APPDATA%\Retirology\retirology.db</span></li>
+          <li><strong>Linux:</strong> <span class="kbd">~/.config/Retirology/retirology.db</span></li>
+        </ul>
+        <p>You own the file. Back it up, copy it between machines, encrypt it at the disk level, or delete it — none of that requires us, and none of it touches a server.</p>
+
+        <h2>The one network request</h2>
+        <p>Once per launch the app fetches <span class="kbd">https://retirology.app/version.json</span> — a static JSON file describing the latest released version. The fetch is a plain HTTPS GET. It contains:</p>
+        <ul>
+          <li>A standard <span class="kbd">User-Agent</span> header (the HTTP client's default).</li>
+          <li>The URL above.</li>
+        </ul>
+        <p>It does not contain:</p>
+        <ul>
+          <li>Your name, email, license key, or any account identifier.</li>
+          <li>Your installed version, OS, locale, screen size, or hardware specs.</li>
+          <li>Any plan data, account balances, or anything you've entered.</li>
+          <li>A unique device ID, install ID, or session ID generated by us.</li>
+        </ul>
+        <p>The response is the same static file every user gets. The app compares the version string to its own and, if a newer one exists, displays a banner pointing at the download page or the customer portal — but it never downloads or installs anything automatically.</p>
+        <p>If the fetch fails (offline, firewall, ad blocker, our domain unreachable), the app continues normally. The update check is a courtesy, not a requirement.</p>
+        <p>If you'd rather it didn't happen at all, you can block <span class="kbd">retirology.app</span> at the firewall or hosts level. The app keeps working.</p>
+
+        <h2>No accounts</h2>
+        <p>There is no Retirology account, no sign-up, no login. You buy a copy through Lemon Squeezy (our payments processor) and download the binary. The app launches and works.</p>
+        <p>The only personal information involved in the purchase is what Lemon Squeezy needs to process payment and email you a receipt. That data is held by them, not us — see the <a href="https://www.lemonsqueezy.com/privacy">Lemon Squeezy privacy policy</a>. We can see your name, email, and order details in the merchant dashboard for support purposes, and we delete records on request.</p>
+
+        <h2>No telemetry, analytics, or crash reporting</h2>
+        <p>The app contains no analytics SDK (no Google Analytics, no Mixpanel, no PostHog, no Amplitude). No crash-reporting SDK (no Sentry, no Bugsnag, no Crashlytics). No A/B testing. No feature flags fetched from a remote service. No remote logging. No "anonymous usage statistics" with any opt-in checkbox, because none of that infrastructure exists in the codebase.</p>
+        <p>This website is the same. No tracking pixels. No analytics scripts. No cookies. The only third-party assets it loads are Tailwind from a CDN, the Inter web font from Google Fonts, and the Lemon Squeezy checkout overlay (which only initializes when you click a Buy button).</p>
+
+        <h2>What about the bundled historical dataset?</h2>
+        <p>The Monte Carlo bootstrap mode draws from a 1928–2024 dataset of S&amp;P 500, 10-year Treasury, T-bill, and CPI returns. That dataset ships with the application as a static file. It's read locally; the app never fetches market data from a network source at runtime.</p>
+
+        <h2>Build it yourself</h2>
+        <p>If you'd rather verify what's running than trust this page, the source code is public:</p>
+        <ul>
+          <li><a href="https://github.com/Retirology/Retirology-App">github.com/Retirology/Retirology-App</a> — full source, with build instructions in the README.</li>
+        </ul>
+        <p>You can grep the codebase for network calls (there's exactly one). You can rebuild your own binary and run that instead of ours. We'd rather you do that than use software you don't trust.</p>
+
+        <h2>Children</h2>
+        <p>Retirology is a financial planning tool intended for adults. We don't knowingly market it to anyone under 18. There's no account system, so no children's data is collected even in principle.</p>
+
+        <h2>Changes to this statement</h2>
+        <p>If the privacy posture of the app ever changes — e.g. a future version adds optional telemetry — that change will be (a) opt-in by default, (b) clearly described in the changelog and on this page, and (c) reflected in source code you can verify. The "last updated" date at the top of this page tracks revisions.</p>
+
+        <h2>How to file a privacy concern</h2>
+        <p>Email <a href="mailto:retirology.app@gmail.com">retirology.app@gmail.com</a> with the subject line "Privacy". Include what you observed and how to reproduce it. We treat anything that contradicts this statement as a serious bug.</p>
+
+        <h2>Contact</h2>
+        <p>Retirology &mdash; <a href="mailto:retirology.app@gmail.com">retirology.app@gmail.com</a></p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
+        <span class="font-bold tracking-tight">Retirology</span>
+        <span class="text-slate-500 text-sm">© 2026</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600" aria-label="Footer">
+        <a href="privacy.html"   class="hover:text-slate-900">Privacy</a>
+        <a href="changelog.html" class="hover:text-slate-900">Changelog</a>
+        <a href="download.html"  class="hover:text-slate-900">Download</a>
+        <a href="https://github.com/Retirology/Retirology-App" class="hover:text-slate-900">GitHub</a>
+        <a href="mailto:retirology.app@gmail.com" class="hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

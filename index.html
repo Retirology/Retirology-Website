@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Retirology — FIRE planning without the subscription</title>
+  <meta name="description" content="Professional retirement planning as a one-time purchase from $19 — not a $20–$40/month rental. Roth ladders, Monte Carlo, ACA optimization, full state tax. Local-only. No accounts." />
+  <link rel="canonical" href="https://retirology.app/" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Retirology — FIRE planning without the subscription" />
+  <meta property="og:description" content="Professional retirement planning as a one-time purchase from $19 — not a $20–$40/month rental. Local-only. No accounts." />
+  <meta property="og:url" content="https://retirology.app/" />
+  <meta property="og:image" content="https://retirology.app/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Retirology — FIRE planning without the subscription" />
+  <meta name="twitter:description" content="Professional retirement planning as a one-time purchase from $19 — not a $20–$40/month rental. Local-only. No accounts." />
+  <meta name="twitter:image" content="https://retirology.app/assets/og-image.png" />
+
+  <!-- Tailwind v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red:   '#dc2626',
+              amber: '#f59e0b',
+              green: '#16a34a',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+          maxWidth: { '6.5xl': '76rem' },
+        },
+      },
+    };
+  </script>
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <link rel="stylesheet" href="styles/custom.css" />
+
+  <!-- Lemon Squeezy overlay checkout -->
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Retirology 2026",
+    "operatingSystem": "macOS, Windows, Linux",
+    "applicationCategory": "FinanceApplication",
+    "description": "FIRE planning desktop app sold as a one-time purchase, not a subscription. Path to FI, drawdown strategy, Roth conversion ladders, Monte Carlo, ACA optimization, full state tax modeling. Local-only, no accounts.",
+    "offers": {
+      "@type": "Offer",
+      "price": "19.00",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-900">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded-md focus:shadow">
+    Skip to content
+  </a>
+
+  <!-- ───────── Sticky nav ───────── -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/85 border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Retirology home">
+        <img src="assets/logo.png" alt="" width="32" height="32" class="rounded-full" />
+        <span class="font-bold text-lg tracking-tight">Retirology</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Primary">
+        <a href="#features"  class="hover:text-slate-900">Features</a>
+        <a href="#privacy"   class="hover:text-slate-900">Privacy</a>
+        <a href="#pricing"   class="hover:text-slate-900">Pricing</a>
+        <a href="download.html" class="hover:text-slate-900">Download</a>
+      </nav>
+      <a href="#pricing" class="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 text-white text-sm font-semibold px-3.5 py-2 hover:bg-slate-800 transition">
+        Buy
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ───────── Hero ───────── -->
+    <section class="hero-halo">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-16 sm:pt-20 pb-10 sm:pb-14">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div class="lg:col-span-6">
+            <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-green bg-green-50 border border-green-200 rounded-full px-3 py-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+              Retirology 2026 — out now
+            </p>
+            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
+              FIRE planning
+              <span class="brand-gradient-text">without the subscription.</span>
+            </h1>
+            <p class="mt-5 text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed">
+              Professional-grade retirement analysis as a one-time purchase — not a $20–$40/month rental.
+              Roth conversion ladders, Monte Carlo, ACA optimization, full 51-state tax modeling.
+              Runs on your machine. No accounts. Your numbers stay yours.
+            </p>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white font-semibold px-5 py-3 hover:bg-slate-800 transition">
+                Buy Retirology 2026 — $19+
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+              </a>
+              <a href="#features" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white text-slate-900 font-semibold px-5 py-3 hover:bg-slate-50 transition">
+                See features
+              </a>
+            </div>
+            <p class="mt-5 text-sm text-slate-500">
+              macOS · Windows · Linux  &middot;  ~80&nbsp;MB installer  &middot;  Works offline
+            </p>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="shot">
+              <img src="screenshots/mission-control.png" alt="Retirology mission-control dashboard showing portfolio summary, FI projection, and drawdown plan" loading="eager" width="2400" height="1500" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-12">
+        <p class="text-center text-sm text-slate-600">
+          $19+ once, never again &middot; No subscription &middot; No accounts &middot; No data collection &middot;
+          Source code <a class="font-semibold text-slate-900 underline underline-offset-2 hover:text-brand-green" href="https://github.com/Retirology/Retirology-App">public on GitHub →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ───────── Features ───────── -->
+    <section id="features" class="py-20 sm:py-24 hairline">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">What it does</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Everything you need to plan a serious retirement.</h2>
+          <p class="mt-4 text-lg text-slate-600">
+            Most retirement calculators give you a single number. Retirology models the whole arc — accumulation through drawdown — and lets you stress-test the plan against bad markets, tax law, and your own assumptions.
+          </p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-2 gap-10 lg:gap-12">
+
+          <!-- Onboarding wizard -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l-3-3"/><path d="M21 17H8l3 3"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Two-minute onboarding</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  A four-step wizard — about you, accounts, spending, strategies — gets a plan personalized in roughly two minutes. Defaults are sane, every value is editable later, and nothing locks you in.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/onboarding.png" alt="Retirology onboarding wizard showing the About You step with age, target retirement age, filing status, and state inputs" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Path to FI -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Path to FI</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Multi-bucket accumulation modeling — taxable, traditional, Roth, HSA — with per-account growth rates, employer match, HSA tax credit, and inflation-adjusted projections.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/accumulation.png" alt="Accumulation projection chart showing portfolio growth across taxable, traditional, Roth, and HSA buckets over time" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Drawdown plan -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-amber-50 text-brand-amber flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4v16h18"/><path d="M7 16l4-6 4 3 4-7"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Drawdown plan</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Year-by-year retirement simulation with income sourcing, MAGI strategy, ACA premium-subsidy optimization, SEPP 72(t), RMDs, Social Security claim ages, and full state + locality income tax for 51 states.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/drawdown.png" alt="Drawdown view showing year-by-year retirement simulation: starting net worth, income sourcing breakdown, and MAGI strategy" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Roth conversion ladders -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-amber-50 text-brand-amber flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4v-4H4z"/><path d="M10 16h4v-4h-4z"/><path d="M16 12h4V8h-4z"/><path d="M4 20l16-12"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Roth conversion ladders</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Four ladder modes — fill-the-bracket, ACA-cap, fixed-amount, and target-RMD — with year-by-year schedules showing conversion amounts, taxes paid, and the resulting Roth balance through age 89.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/roth-ladder.png" alt="Roth conversion ladder schedule showing year-by-year conversion amounts, taxes paid, and resulting Roth balance" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Monte Carlo -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-red-50 text-brand-red flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Monte Carlo</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Normal-distribution sampling and historical bootstrap mode pulling from a bundled 1928–2024 dataset (S&amp;P 500, 10-yr Treasury, T-bills, CPI). Get a real success-rate distribution, not a single optimistic line.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/monte-carlo.png" alt="Monte Carlo success-rate fan chart with percentile bands across thousands of simulated retirement paths" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Stress tests -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Historical stress tests</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Replay your plan against the actual sequences from 1929, 1973–74, 2000, 2008, and 2022. See exactly when a real bad market would have broken it — and by how much.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/stress-tests.png" alt="Stress test results comparing portfolio outcomes across the 1929, 1973-74, 2000, 2008, and 2022 historical sequences" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Sankey cashflow -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6c4 0 5 12 9 12h3"/><path d="M3 12h6c4 0 5 0 9 0h3"/><path d="M3 18h6c4 0 5-12 9-12h3"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Sankey cash flow</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Trace every dollar through retirement — from accounts and Social Security through Roth conversions, taxes, ACA premiums, and spending. See where the money actually goes.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/retirement-cash-flow.png" alt="Sankey diagram showing retirement cash flow: account withdrawals, Social Security, conversions, taxes, ACA premiums, and net spending" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Compare -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-amber-50 text-brand-amber flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Multi-scenario comparison</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Save plans, then put any two side by side — different claim ages, ladder strategies, retirement years, geographies. The optimizer surfaces the meaningful differences automatically.
+                </p>
+              </div>
+            </div>
+            <div class="shot mt-auto pt-5">
+              <img src="screenshots/compare.png" alt="Side-by-side comparison view of two saved retirement plans with key metrics and differences highlighted" loading="lazy" />
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── Cost comparison ───────── -->
+    <section id="cost" class="py-20 sm:py-24 bg-slate-50 hairline">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">The math on the math tools</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Most planning tools rent themselves to you. We don't.</h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            A typical retirement-planning service charges a monthly fee that runs forever. Retirology is one purchase per major version — and the year after that is optional.
+          </p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-6 items-stretch">
+
+          <!-- Typical subscription planner -->
+          <div class="rounded-2xl border border-slate-300 bg-white p-7 flex flex-col">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Typical subscription planner</p>
+            <p class="mt-3 flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">$240–$480</span>
+              <span class="text-slate-500 font-medium">/ year, every year</span>
+            </p>
+            <p class="mt-1 text-sm text-slate-500">$20–$40/month — paid in perpetuity</p>
+            <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
+              <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Account required</li>
+              <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Your financial data on their servers</li>
+              <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Lose access if you stop paying</li>
+              <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Subject to their next price hike</li>
+            </ul>
+          </div>
+
+          <!-- Retirology -->
+          <div class="tier-recommended rounded-2xl bg-white p-7 flex flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-green">Retirology 2026</p>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">One-time</span>
+            </div>
+            <p class="mt-3 flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">$19+</span>
+              <span class="text-slate-500 font-medium">once</span>
+            </p>
+            <p class="mt-1 text-sm text-slate-500">$65 suggested — about a single month of an advisor</p>
+            <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
+              <li class="flex gap-2"><span class="text-brand-green shrink-0">✓</span> No account, ever</li>
+              <li class="flex gap-2"><span class="text-brand-green shrink-0">✓</span> Local SQLite — your machine, your data</li>
+              <li class="flex gap-2"><span class="text-brand-green shrink-0">✓</span> Yours forever, runs offline</li>
+              <li class="flex gap-2"><span class="text-brand-green shrink-0">✓</span> Free patches; next year's version is optional</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mt-8 text-sm text-slate-500 max-w-3xl">
+          Even at the suggested $65 tier, Retirology costs less than two months of a typical subscription planner — and you keep using it after.
+        </p>
+      </div>
+    </section>
+
+    <!-- ───────── Privacy ───────── -->
+    <section id="privacy" class="py-20 sm:py-24 hairline">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-5">
+            <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Privacy isn't a tagline</p>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Your numbers stay on your machine.</h2>
+            <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+              Most retirement tools want you to upload your entire net worth to their servers. Retirology runs the math locally. We have nothing to leak because we have nothing to collect.
+            </p>
+            <div class="mt-6 rounded-xl border border-slate-300 bg-white p-5">
+              <p class="text-sm text-slate-700 leading-relaxed">
+                <span class="font-semibold text-slate-900">Audit the source:</span>
+                <a class="text-brand-green underline underline-offset-2 break-words" href="https://github.com/Retirology/Retirology-App">github.com/Retirology/Retirology-App</a>
+              </p>
+              <p class="mt-2 text-sm text-slate-500">Build it yourself if you want to verify what's running.</p>
+            </div>
+            <div class="mt-5">
+              <a href="privacy.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-brand-green">
+                Read the full privacy statement
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+            <li class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="font-bold text-slate-900">One network request. Ever.</h3>
+              <p class="mt-1.5 text-sm text-slate-600 leading-relaxed">A once-per-launch fetch of <span class="kbd">retirology.app/version.json</span> to check for updates. It's a static file. No headers about you, no IDs, no telemetry.</p>
+            </li>
+            <li class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="font-bold text-slate-900">Local SQLite. That's it.</h3>
+              <p class="mt-1.5 text-sm text-slate-600 leading-relaxed">Every account, every scenario, every dollar lives in one file on your disk. Back it up, encrypt it, delete it. Your call.</p>
+            </li>
+            <li class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="font-bold text-slate-900">No accounts. No login.</h3>
+              <p class="mt-1.5 text-sm text-slate-600 leading-relaxed">There's nothing to sign up for. The app launches and works. The only thing you give us at purchase is an email — for the receipt.</p>
+            </li>
+            <li class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="font-bold text-slate-900">No analytics, no trackers.</h3>
+              <p class="mt-1.5 text-sm text-slate-600 leading-relaxed">No Google Analytics, no Mixpanel, no Sentry, no chat widget. Not in the app. Not on this website.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-10 rounded-xl border border-slate-300 bg-white p-5 sm:p-6">
+          <p class="text-sm text-slate-700">
+            <span class="font-semibold text-slate-900">Compare:</span>
+            traditional planning tools charge $20–$40/month, require an account, and store your full financial picture on their servers.
+            Retirology is a one-time $19+ purchase, runs offline, and stores nothing remotely.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── Pricing ───────── -->
+    <section id="pricing" class="py-20 sm:py-24 hairline">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Honest pricing</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Pick a tier. Same product.</h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            Retirology 2026 is a one-time purchase with a $19 floor — pick the tier that feels fair. There's just one product; the tier you choose is what you pay.
+          </p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+
+          <!-- Floor -->
+          <div class="rounded-2xl border border-slate-300 bg-white p-7 flex flex-col">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Floor</p>
+            <p class="mt-2 flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold tracking-tight text-slate-900">$19</span>
+              <span class="text-slate-500 font-medium">one-time</span>
+            </p>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              The minimum. Same app, same features. Pay what you can — no judgment.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> All Retirology 2026 features</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Free patches through 2026</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Use on all your devices</li>
+            </ul>
+            <a href="#"
+               class="lemonsqueezy-button mt-7 inline-flex items-center justify-center rounded-lg border border-slate-900 text-slate-900 font-semibold px-4 py-3 hover:bg-slate-900 hover:text-white transition"
+               data-product-id="1041208"
+               data-variant-id=""
+               data-checkout-price="1900">
+              Buy at $19
+            </a>
+          </div>
+
+          <!-- Suggested (recommended) -->
+          <div class="tier-recommended rounded-2xl bg-white p-7 flex flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-green">Suggested</p>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">Most pick this</span>
+            </div>
+            <p class="mt-2 flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold tracking-tight text-slate-900">$65</span>
+              <span class="text-slate-500 font-medium">one-time</span>
+            </p>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Roughly a single month of a typical advisor subscription — and you keep the software for the year.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Everything in Floor</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Funds continued development</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Priority issue triage on GitHub</li>
+            </ul>
+            <a href="#"
+               class="lemonsqueezy-button mt-7 inline-flex items-center justify-center rounded-lg bg-slate-900 text-white font-semibold px-4 py-3 hover:bg-slate-800 transition"
+               data-product-id="1041208"
+               data-variant-id=""
+               data-checkout-price="6500">
+              Buy at $65
+            </a>
+          </div>
+
+          <!-- Generous -->
+          <div class="rounded-2xl border border-slate-300 bg-white p-7 flex flex-col">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Generous</p>
+            <p class="mt-2 flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold tracking-tight text-slate-900">$200</span>
+              <span class="text-slate-500 font-medium">one-time</span>
+            </p>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              For folks who want to back the project meaningfully. You can also enter a custom amount in checkout.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Everything in Suggested</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Directly funds future features</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Our genuine thanks</li>
+            </ul>
+            <a href="#"
+               class="lemonsqueezy-button mt-7 inline-flex items-center justify-center rounded-lg border border-slate-900 text-slate-900 font-semibold px-4 py-3 hover:bg-slate-900 hover:text-white transition"
+               data-product-id="1041208"
+               data-variant-id=""
+               data-checkout-price="20000">
+              Buy at $200
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-8 text-sm text-slate-500 text-center max-w-2xl mx-auto">
+          Mid-year patches (e.g. 2026.1, 2026.2) are <span class="font-semibold text-slate-700">free</span> for 2026 customers.
+          When Retirology 2027 ships, existing customers get a discount code — or stay on 2026 indefinitely. It's yours.
+        </p>
+      </div>
+    </section>
+
+    <!-- ───────── FAQ ───────── -->
+    <section id="faq" class="py-20 sm:py-24 bg-slate-50 hairline">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6">
+        <p class="text-sm font-semibold uppercase tracking-wider text-brand-green text-center">Questions</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-center">Things people reasonably want to know.</h2>
+
+        <div class="mt-12 divide-y divide-slate-200 rounded-xl border border-slate-200 bg-white">
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">What's the difference between $19 and $65?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Nothing in the software. The app and every feature are identical regardless of tier. The price you choose is what funds the next release. $19 is the floor; $65 is what we suggest if it's not a stretch; $200 is for folks who want to back the project.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">Is this a subscription?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              No. You buy a major version (e.g. Retirology 2026) once and own it. Patches that year are free. Next year's version is a separate product — buy it if the new features are worth it, otherwise keep using 2026 forever.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">What happens to my data?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Stays on your machine in a single SQLite file. We don't see it, can't read it, and have no way to. See the <a class="text-brand-green underline underline-offset-2" href="#privacy">privacy section</a> or the <a class="text-brand-green underline underline-offset-2" href="privacy.html">full privacy statement</a> for the per-OS file paths.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">What happens when 2027 ships?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Retirology 2027 is a separate product — refreshed tax tables, new features, and you'd buy it if you want the upgrade. Existing 2026 customers receive a discount code. If you'd rather stay on 2026, your copy keeps working forever; nothing remote is required for it to function.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">What if Retirology shuts down?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              The app keeps working. There are no servers it depends on — the only network call is the once-per-launch update check, and if that fails the app just continues. Source code is public, so it can also be built and patched without us.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">Mac warns me it's an unidentified developer</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Right-click the app icon in Finder and choose <span class="kbd">Open</span>, then click <span class="kbd">Open</span> in the dialog. After that it launches normally. We're working on Apple Developer ID notarization post-launch. Full per-OS instructions on the <a class="text-brand-green underline underline-offset-2" href="download.html">download page</a>.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">Why no free version?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              A modest yearly price keeps the project sustainable without ads, accounts, or upsells — which is the whole point. If $19 is genuinely a problem, the source is public: clone the <a class="text-brand-green underline underline-offset-2" href="https://github.com/Retirology/Retirology-App">repo</a> and build it yourself for $0.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">Can I get a refund?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Yes. Email <a class="text-brand-green underline underline-offset-2" href="mailto:retirology.app@gmail.com">retirology.app@gmail.com</a> within 14 days of purchase and we'll refund through Lemon Squeezy — see their <a class="text-brand-green underline underline-offset-2" href="https://www.lemonsqueezy.com/refund-policy">refund policy</a> for specifics.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── Final CTA ───────── -->
+    <section id="download" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6">
+        <div class="rounded-2xl border border-slate-300 bg-white p-8 sm:p-12 text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to run the numbers?</h2>
+          <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+            Download once, plan forever. macOS, Windows, Linux. No account needed.
+          </p>
+          <div class="mt-7 flex flex-wrap justify-center gap-3">
+            <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white font-semibold px-5 py-3 hover:bg-slate-800 transition">
+              Buy Retirology 2026 — $19+
+            </a>
+            <a href="download.html" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white text-slate-900 font-semibold px-5 py-3 hover:bg-slate-50 transition">
+              Install instructions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────── Footer ───────── -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
+        <span class="font-bold tracking-tight">Retirology</span>
+        <span class="text-slate-500 text-sm">© 2026</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600" aria-label="Footer">
+        <a href="privacy.html"   class="hover:text-slate-900">Privacy</a>
+        <a href="changelog.html" class="hover:text-slate-900">Changelog</a>
+        <a href="download.html"  class="hover:text-slate-900">Download</a>
+        <a href="https://github.com/Retirology/Retirology-App" class="hover:text-slate-900">GitHub</a>
+        <a href="mailto:retirology.app@gmail.com" class="hover:text-slate-900">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
