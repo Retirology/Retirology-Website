@@ -89,7 +89,7 @@
         <a href="#privacy"   class="hover:text-slate-900">Privacy</a>
         <a href="#pricing"   class="hover:text-slate-900">Pricing</a>
       </nav>
-      <a href="#pricing" class="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 text-white text-sm font-semibold px-3.5 py-2 hover:bg-slate-800 transition">
+      <a href="#pricing" class="inline-flex items-center gap-1.5 rounded-lg btn-brand-gradient text-white text-sm font-semibold px-3.5 py-2 transition">
         Buy
         <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
       </a>
@@ -109,7 +109,7 @@
             </p>
             <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
               FIRE planning
-              <span class="brand-gradient-text">without the subscription.</span>
+              <span class="brand-gradient-text-reverse">without the subscription.</span>
             </h1>
             <p class="mt-5 text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed">
               Professional-grade retirement analysis as a one-time purchase — not a $20–$40/month rental.
@@ -117,7 +117,7 @@
               Runs on your machine. No accounts. Your numbers stay yours.
             </p>
             <div class="mt-7 flex flex-wrap items-center gap-3">
-              <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white font-semibold px-5 py-3 hover:bg-slate-800 transition">
+              <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg btn-brand-gradient text-white font-semibold px-5 py-3 transition">
                 Buy Retirology 2026 — $19+
                 <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
               </a>
@@ -131,7 +131,7 @@
           </div>
 
           <div class="lg:col-span-6">
-            <div class="shot">
+            <div class="shot gradient-ring gradient-ring-glow">
               <img src="screenshots/mission-control.png" alt="Retirology mission-control dashboard showing portfolio summary, FI projection, and drawdown plan" loading="eager" width="2400" height="1500" />
             </div>
           </div>
@@ -204,7 +204,7 @@
               <div>
                 <h3 class="text-xl font-bold tracking-tight">Drawdown plan</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Year-by-year retirement simulation with income sourcing, MAGI strategy, ACA premium-subsidy optimization, SEPP 72(t), RMDs, Social Security claim ages, and full state + locality income tax for 51 states.
+                  Year-by-year retirement simulation with income sourcing, MAGI strategy, ACA premium-subsidy optimization, SEPP 72(t), RMDs, Social Security claim ages, and full state + locality income tax for 51 states — across all four federal filing statuses (single, MFJ, head of household, MFS).
                 </p>
               </div>
             </div>
@@ -222,7 +222,7 @@
               <div>
                 <h3 class="text-xl font-bold tracking-tight">Roth conversion ladders</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Four ladder modes — fill-the-bracket, ACA-cap, fixed-amount, and target-RMD — with year-by-year schedules showing conversion amounts, taxes paid, and the resulting Roth balance through age 89.
+                  Four ladder modes — fill-the-bracket, ACA-cap, fixed-amount, and target-RMD — with year-by-year schedules showing conversion amounts, taxes paid, and the resulting Roth balance through your modeled retirement horizon.
                 </p>
               </div>
             </div>
@@ -466,10 +466,10 @@
             <ul class="mt-5 space-y-2 text-sm text-slate-700">
               <li class="flex gap-2"><span class="text-brand-green">✓</span> Everything in Floor</li>
               <li class="flex gap-2"><span class="text-brand-green">✓</span> Funds continued development</li>
-              <li class="flex gap-2"><span class="text-brand-green">✓</span> Priority issue triage on GitHub</li>
+              <li class="flex gap-2"><span class="text-brand-green">✓</span> Helps cover next year's tax-table updates</li>
             </ul>
             <a href="https://retirology.lemonsqueezy.com/buy/fa5e27bf-8c28-4a38-ba90-f4b4e2670144?embed=1"
-               class="lemonsqueezy-button mt-7 inline-flex items-center justify-center rounded-lg bg-slate-900 text-white font-semibold px-4 py-3 hover:bg-slate-800 transition">
+               class="lemonsqueezy-button mt-7 inline-flex items-center justify-center rounded-lg btn-brand-gradient text-white font-semibold px-4 py-3 transition">
               Buy at $65
             </a>
           </div>
@@ -582,15 +582,6 @@
             </p>
           </details>
 
-          <details class="group p-5 sm:p-6">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="font-semibold text-slate-900">Can I get a refund?</span>
-              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
-            </summary>
-            <p class="mt-3 text-slate-600 leading-relaxed">
-              Yes. Email <a class="text-brand-green underline underline-offset-2" href="mailto:retirology.app@gmail.com">retirology.app@gmail.com</a> within 14 days of purchase and we'll refund through Lemon Squeezy — see their <a class="text-brand-green underline underline-offset-2" href="https://www.lemonsqueezy.com/refund-policy">refund policy</a> for specifics.
-            </p>
-          </details>
         </div>
       </div>
     </section>
@@ -598,13 +589,13 @@
     <!-- ───────── Final CTA ───────── -->
     <section id="download" class="py-16 sm:py-20">
       <div class="mx-auto max-w-4xl px-4 sm:px-6">
-        <div class="rounded-2xl border border-slate-300 bg-white p-8 sm:p-12 text-center">
+        <div class="gradient-ring gradient-ring-glow rounded-2xl bg-white p-8 sm:p-12 text-center">
           <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to run the numbers?</h2>
           <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
             Download once, plan forever. macOS, Windows, Linux. No account needed.
           </p>
           <div class="mt-7 flex flex-wrap justify-center gap-3">
-            <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white font-semibold px-5 py-3 hover:bg-slate-800 transition">
+            <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg btn-brand-gradient text-white font-semibold px-5 py-3 transition">
               Buy Retirology 2026 — $19+
             </a>
           </div>
