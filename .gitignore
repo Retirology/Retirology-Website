@@ -1,0 +1,9 @@
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*~
