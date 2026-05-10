@@ -2,6 +2,26 @@
    carries brand gradient tokens, prose tweaks, and a few details Tailwind utilities
    alone can't express cleanly. */
 
+/* ───────── Geom (variable, self-hosted) — covers the full 100–900 weight range
+   from a single file each. No third-party font request, which keeps the privacy
+   posture clean. ───────── */
+@font-face {
+  font-family: 'Geom';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/geom/Geom-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../assets/fonts/geom/Geom-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geom';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/geom/Geom-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../assets/fonts/geom/Geom-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
 :root {
   --brand-red:    #dc2626;
   --brand-amber:  #f59e0b;
@@ -21,8 +41,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-family: 'Geom', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -27,14 +27,11 @@
       theme: {
         extend: {
           colors: { brand: { red: '#dc2626', amber: '#f59e0b', green: '#16a34a' } },
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'] },
+          fontFamily: { sans: ['Geom', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'] },
         },
       },
     };
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="styles/custom.css" />
 </head>
 <body class="bg-white text-slate-900">
@@ -62,7 +59,7 @@
         <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Release notes</p>
         <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">Changelog</h1>
         <p class="mt-4 text-lg text-slate-600 max-w-2xl">
-          Each entry corresponds to a version published to GitHub Releases. Mid-year patch releases are free for that year's customers.
+          Mid-year patch releases are free for that year's customers and delivered through the Lemon Squeezy customer portal.
         </p>
       </div>
     </section>
@@ -77,11 +74,7 @@
             <span class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">Initial release</span>
           </div>
 
-          <p class="mt-5">
-            First public release of Retirology. The full feature list lives in the
-            <a href="https://github.com/Retirology/Retirology-App/blob/main/README.md">app README</a>;
-            the highlights:
-          </p>
+          <p class="mt-5">First public release of Retirology. Highlights:</p>
 
           <ul>
             <li>Path-to-FI accumulation projections across taxable, traditional, Roth, and HSA buckets, with employer match, HSA tax credit, and inflation-adjusted figures.</li>
@@ -93,11 +86,6 @@
             <li>Side-by-side multi-scenario comparison.</li>
             <li>Local SQLite storage. No accounts, no telemetry, one update-check network call per launch.</li>
           </ul>
-
-          <p class="text-sm text-slate-500">
-            Build from source:
-            <a href="https://github.com/Retirology/Retirology-App/blob/main/README.md">README</a>
-          </p>
         </article>
 
       </div>
@@ -115,7 +103,6 @@
       <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600" aria-label="Footer">
         <a href="privacy.html"   class="hover:text-slate-900">Privacy</a>
         <a href="changelog.html" class="hover:text-slate-900">Changelog</a>
-        <a href="https://github.com/Retirology/Retirology-App" class="hover:text-slate-900">GitHub</a>
         <a href="mailto:retirology.app@gmail.com" class="hover:text-slate-900">Contact</a>
       </nav>
     </div>
