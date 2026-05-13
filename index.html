@@ -132,7 +132,15 @@
 
           <div class="lg:col-span-6">
             <div class="shot gradient-ring gradient-ring-glow">
-              <img src="screenshots/mission-control.png" alt="Retirology mission-control dashboard showing portfolio summary, FI projection, and drawdown plan" loading="eager" width="2400" height="1500" />
+              <video
+                id="hero-video"
+                poster="screenshots/mission-control.png"
+                autoplay muted loop playsinline preload="metadata"
+                width="2400" height="1500"
+                aria-label="Walkthrough of Retirology clicking through the main views — accumulation, drawdown, Roth ladder, Monte Carlo, and Sankey cash flow">
+                <source src="assets/video/hero.webm" type="video/webm" />
+                <source src="assets/video/hero.mp4"  type="video/mp4"  />
+              </video>
             </div>
           </div>
         </div>
@@ -619,6 +627,16 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Respect prefers-reduced-motion: pause the hero video for users who've
+       told their OS they don't want movement. The poster image is what they
+       see instead — no telemetry, no third-party scripts. -->
+  <script>
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var v = document.getElementById('hero-video');
+      if (v) { v.removeAttribute('autoplay'); v.pause(); }
+    }
+  </script>
 
 </body>
 </html>
