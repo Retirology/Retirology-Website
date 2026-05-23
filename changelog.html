@@ -67,6 +67,168 @@
     <section class="py-10 sm:py-14">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 prose-rt">
 
+        <article id="v2026-0-1" class="scroll-mt-24">
+          <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
+            <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">2026.0.1</h2>
+            <span class="text-sm text-slate-500">Released 2026-05-23</span>
+            <span class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">Patch</span>
+          </div>
+
+          <p class="mt-5">
+            The first post-launch patch. Eleven tracked improvements based on
+            customer feedback and a deeper pass over the account-type model.
+            Highlights: a brand-new <strong>Additional Income Streams</strong>
+            section for modeling rental income, pensions, and annuities;
+            five new <strong>liability account types</strong> (mortgage,
+            student / auto / credit card / personal loan) that amortize and
+            subtract from net worth; a <strong>Property Sale Event</strong>
+            feature; and an expanded <strong>Cash Flow</strong> diagram that
+            now covers your entire lifetime instead of just retirement.
+            Free download for existing 2026 customers via your Lemon Squeezy
+            customer portal.
+          </p>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">New features</h3>
+          <ul>
+            <li>
+              <strong>Additional Income Streams.</strong> A new section on the
+              Budget Analysis tab lets you model recurring retirement cash
+              flows that previously had no good home — rental income, pensions,
+              annuities, trust distributions, royalties. Each stream carries a
+              name, type, monthly amount, age window, tax treatment
+              (ordinary income or tax-free), and COLA. Streams active during
+              pre-retirement years flow into your Cash Flow &amp; FI Trajectory
+              cards; streams active during retirement reduce the portfolio
+              withdrawals needed to fund your spending. Replaces the old
+              Social-Security-stream hack for rental income.
+            </li>
+            <li>
+              <strong>Mortgage and other liabilities.</strong> Five new account
+              types in a new "Liabilities" category: Mortgage, Student loan,
+              Auto loan, Credit card balance, Personal loan. Outstanding
+              balances subtract from net worth. Each loan amortizes
+              year-over-year using the rate and payment you configure;
+              visualized as a red overlay line on the Accumulation chart and a
+              new <em>Debt</em> column on the Drawdown tab's year-by-year
+              table. Credit-card minimum-payment cases (where the payment is
+              less than monthly interest) are modeled correctly too.
+            </li>
+            <li>
+              <strong>Property Sale Event.</strong> Real estate, 529, pension,
+              and "other" accounts now have <em>Sell at age</em> and
+              <em>Net proceeds (today&rsquo;s $)</em> fields. At the sale year,
+              the asset zeroes out and the net proceeds flow into your taxable
+              bucket as fresh basis. Lets you model "I'll sell the house at
+              70 and convert to a smaller place" cleanly. The previous
+              workaround required manually editing the account balance and
+              adding a negative lumpy expense.
+            </li>
+            <li>
+              <strong>Real estate, 529, and pension assets now appreciate
+              in the chart.</strong> Pre-2026.0.1 the model held these at a
+              static balance, so a $500k home today was still $500k at
+              retirement on your projection chart. Now they compound at the
+              per-account rate during accumulation and contribute properly to
+              your net worth trajectory. Drawdown still excludes them from
+              the withdrawal hierarchy (you can&rsquo;t pay groceries with
+              your house).
+            </li>
+            <li>
+              <strong>Roth contributions in the Budget Analysis dropdown.</strong>
+              Three new expense categories under the Savings group: Roth IRA
+              contributions, Roth 401(k) contributions, Mega backdoor Roth
+              contributions. All flagged as savings so they show up in your
+              savings-rate analysis without inflating your annual_spend.
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">Bug fixes</h3>
+          <ul>
+            <li>
+              <strong>HSA non-medical post-65 tax treatment.</strong>
+              Previously the model treated every HSA withdrawal as qualified
+              medical (tax-free). In reality, post-65 HSA withdrawals beyond
+              your medical spending are taxed as ordinary income
+              (penalty-free, same treatment as a Traditional IRA). The
+              Accounts tab gains an "Annual medical out-of-pocket" field;
+              set it to model the tax distinction correctly. Leave at $0
+              to keep the legacy behavior.
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">UI improvements</h3>
+          <ul>
+            <li>
+              <strong>Cash Flow diagram covers your full lifetime.</strong>
+              The tab formerly called "Retirement Cash Flow" is now just
+              "Cash Flow." Scrub the year slider back to your current age
+              and the Sankey switches to an accumulation view (paycheck
+              flowing into taxes, deductions, retirement contributions, and
+              lifestyle). Cross the retirement boundary and it morphs into
+              the original drawdown view automatically. HSA withdrawal bands
+              also added to the retirement-years view.
+            </li>
+            <li>
+              <strong>Compare tab gains strategy-differentiating metrics.</strong>
+              Seven new rows so two scenarios that hit the same final net
+              worth no longer look identical: Lifetime Roth conversions,
+              Average effective tax rate, Years on ACA bridge, ACA subsidies
+              captured, plus an "End-of-plan portfolio mix" section breaking
+              down what you'll have in Trad / Roth / Taxable when the plan
+              ends.
+            </li>
+            <li>
+              <strong>Budget Analysis Spending Summary is now a donut
+              chart.</strong> The numeric card was replaced with an interactive
+              donut grouped by category (Housing / Transportation / Food /
+              etc.). Hover any slice to see the dollar amount and percentage.
+              Reflects whether you're using budget-derived or manual annual
+              spending. Implied SWR moved to the FI Trajectory card.
+            </li>
+            <li>
+              <strong>FI Target section refactored.</strong> The redundant
+              "Resolved target" card is gone. Three mutually-exclusive cards
+              now: Conservative floor, Strategy-adjusted, and a new inline-editable
+              Custom override. Cleaner three-choice picker instead of
+              two presets plus a passive read-out.
+            </li>
+            <li>
+              <strong>Paycheck section now autosaves.</strong> Matches the
+              Income Streams and Expenses sections — no more explicit Save
+              button to remember; edits are persisted ~600ms after you stop
+              typing. Status indicator shows "Saving…" then "Saved 10:42 AM."
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">Known limitations carried into a future patch</h3>
+          <ul>
+            <li>
+              Income streams and HSA non-medical withdrawals support only
+              <em>ordinary income</em> and <em>tax-free</em> treatments in
+              this release. LTCG / qualified dividend rates will be added in
+              v2026.0.2.
+            </li>
+            <li>
+              Property Sale Event uses the user-entered net value (you handle
+              the capital gains math). Automatic LTCG calculation + home-sale
+              exclusion ($250k single / $500k MFJ) will be added in v2026.0.2.
+            </li>
+            <li>
+              When a debt account pays off mid-projection, the model
+              doesn&rsquo;t automatically remove the corresponding mortgage
+              line from your Budget Analysis. You&rsquo;ll want to remove it
+              manually to avoid the payment continuing to count against your
+              retirement spending after the loan is gone.
+            </li>
+            <li>
+              Selling a property doesn&rsquo;t automatically pay off a linked
+              mortgage account. Set the mortgage payment high enough to
+              amortize to zero by the sale year, or manually delete the loan
+              account, to model this correctly.
+            </li>
+          </ul>
+        </article>
+
         <article id="v2026-0-0" class="scroll-mt-24">
           <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
             <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">2026.0.0</h2>

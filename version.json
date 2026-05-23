@@ -1,8 +1,8 @@
 {
-  "version": "2026.0.0",
+  "version": "2026.0.1",
   "major": "2026",
-  "released_at": "2026-05-10T00:00:00Z",
+  "released_at": "2026-05-23T00:00:00Z",
   "major_upgrade_url":       "https://retirology.app/#pricing",
   "minor_update_portal_url": "https://app.lemonsqueezy.com/my-orders",
-  "release_notes_url":       "https://retirology.app/changelog.html#v2026-0-0"
+  "release_notes_url":       "https://retirology.app/changelog.html#v2026-0-1"
 }
