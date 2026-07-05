@@ -59,13 +59,214 @@
         <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Release notes</p>
         <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">Changelog</h1>
         <p class="mt-4 text-lg text-slate-600 max-w-2xl">
-          Mid-year patch releases are free for that year's customers and delivered through the Lemon Squeezy customer portal.
+          Every release — patches, new features, and annual updates — is free for all customers, delivered through the Lemon Squeezy customer portal.
         </p>
       </div>
     </section>
 
     <section class="py-10 sm:py-14">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 prose-rt">
+
+        <article id="free-forever" class="scroll-mt-24">
+          <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
+            <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">Buy once, free forever</h2>
+            <span class="text-sm text-slate-500">2026-07-05</span>
+            <span class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-slate-900 px-2 py-0.5 rounded-full">Pricing</span>
+          </div>
+
+          <p class="mt-5">
+            We&rsquo;ve simplified how Retirology is sold. It&rsquo;s now a true
+            one-time purchase: pay once — from $19, your call above the floor —
+            and <strong>every future update is yours free</strong>. Bug-fix
+            patches, new features, and the annual releases with refreshed tax
+            tables are all included, forever. No renewal, no per-year charge,
+            no upgrade fee, no discount codes to chase.
+          </p>
+          <p class="mt-3">
+            Already bought Retirology? Nothing changes except in your favor —
+            the annual versions you might once have paid to upgrade to are now
+            free. Re-download the latest build anytime from your
+            <a href="https://app.lemonsqueezy.com/my-orders">Lemon Squeezy customer portal</a>.
+          </p>
+        </article>
+
+        <article id="v2026-0-2" class="scroll-mt-24">
+          <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
+            <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">2026.0.2</h2>
+            <span class="text-sm text-slate-500">Released 2026-07-05</span>
+            <span class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">Patch</span>
+          </div>
+
+          <p class="mt-5">
+            The second patch closes <strong>every known limitation</strong>
+            listed in the 2026.0.1 release notes — fourteen tracked
+            improvements in all. Highlights: a <strong>Lifestyle changes</strong>
+            schedule for modeling spending shifts like kids leaving home or
+            downsizing; <strong>automatic debt payoff handling</strong> (your
+            mortgage payment stops counting toward retirement spending the
+            year the loan is gone); <strong>property sales that pay off their
+            linked mortgage</strong>; <strong>automatic capital gains tax</strong>
+            on property sales with the home-sale exclusion; and
+            <strong>Monte Carlo percentile outcomes</strong> that show your
+            bad-luck floor, not just a success rate. As always — and now
+            officially forever — this update is free: re-download from your
+            Lemon Squeezy customer portal.
+          </p>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">New features</h3>
+          <ul>
+            <li>
+              <strong>Lifestyle changes schedule.</strong> Real lives don&rsquo;t
+              spend one flat inflation-adjusted amount for 50 years. A new
+              table in the Spending section lets you set stepped changes —
+              "from age 55, spending drops to $65k" — for kids moving out,
+              downsizing, or slow-go years. Every projection (drawdown,
+              FI targets, Monte Carlo, recommendations, PDF export) consumes
+              the schedule.
+            </li>
+            <li>
+              <strong>Debt payoffs now reduce your spending automatically.</strong>
+              When a loan amortizes to zero mid-projection, its payment stops
+              counting toward your retirement spending from that year onward —
+              no more manually pruning the budget row. Your required portfolio
+              drops accordingly, since your lifestyle floor genuinely falls
+              after a payoff. A per-loan <em>Payment is part of my spending</em>
+              toggle covers the case where your spending figure never
+              included the payment.
+            </li>
+            <li>
+              <strong>Adjustable-rate loans.</strong> Debt accounts gain an
+              optional scheduled rate change — "4.5% now, resets to 7.25%
+              after year 5" — for ARM and HELOC modeling. Each loan now
+              amortizes individually, so two loans paying off in different
+              years each drop their payment at the right time.
+            </li>
+            <li>
+              <strong>Property sales pay off their linked mortgage.</strong>
+              A sale event can now name the loan it settles: at the sale year,
+              the outstanding balance comes out of the proceeds, the loan
+              zeroes on every chart, and its payment stops counting toward
+              spending. Underwater sales are handled honestly — if the payoff
+              exceeds the proceeds, the shortfall is a cost your plan funds
+              that year.
+            </li>
+            <li>
+              <strong>Automatic capital gains on property sales, with the
+              home-sale exclusion.</strong> Enter a cost basis on a property
+              and the app computes the taxable gain at sale time and runs it
+              through the real bracket-stacked capital-gains math — including
+              the effect on your MAGI for ACA subsidies and IRMAA that year.
+              Check <em>This is my primary residence</em> to apply the IRS
+              &sect;121 exclusion ($250k single / $500k married). Prefer your
+              own math? The net-proceeds override still short-circuits all of
+              it. No basis entered = the previous tax-free behavior, unchanged.
+            </li>
+            <li>
+              <strong>Capital-gains &amp; qualified-dividend income streams.</strong>
+              Income streams gain a third tax treatment for REIT distributions,
+              qualified dividends, and trust K-1 capital-gains passthrough.
+              These stack on top of ordinary income per IRS rules — landing in
+              the 0% bracket during low-income years — and count toward MAGI.
+            </li>
+            <li>
+              <strong>Per-spouse income streams and survivor modeling.</strong>
+              Married-joint households can now mark each stream as yours, your
+              spouse&rsquo;s, or joint. Spouse-owned streams read their age
+              window in the <em>spouse&rsquo;s</em> age frame — "her pension
+              starts at 65" now means when she turns 65. Pair it with the new
+              optional <em>Spouse life expectancy</em> input: from that year,
+              spouse-owned pensions continue at their configured survivor
+              percentage (0/50/75/100%), and household Social Security drops
+              to the larger of the two benefits per the survivor rule.
+            </li>
+            <li>
+              <strong>Monte Carlo percentile outcomes.</strong> Two plans can
+              both show 95% success while one leaves a $200k cushion in bad
+              markets and the other leaves $1.5M. Every run now reports the
+              5th / median / 95th percentile end-of-plan net worth (today&rsquo;s
+              dollars) — on the Mission Control card and as three comparison
+              rows on the Compare tab.
+            </li>
+            <li>
+              <strong>Lifetime IRMAA tracking.</strong> The Medicare surcharge
+              portion of your healthcare costs is now broken out per year, and
+              the Compare tab gains a <em>Lifetime IRMAA paid</em> row —
+              directly showing whether a conversion strategy that runs MAGI
+              hot after 65 is quietly costing you thousands in surcharges.
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">Bug fixes</h3>
+          <ul>
+            <li>
+              <strong>Number fields now edit like normal number fields.</strong>
+              Two long-standing annoyances shared one root cause: clearing a
+              field with Backspace instantly snapped back to 0, and editing
+              several fields before hitting Save could silently lose one of
+              your values. Every numeric input in the app was rebuilt — what
+              you see in the field is now always exactly what gets saved, and
+              click-then-type reliably replaces the old value.
+            </li>
+            <li>
+              <strong>Monte Carlo debt accuracy.</strong> Simulations
+              previously started the retirement phase with today&rsquo;s debt
+              balance instead of the projected balance at retirement,
+              slightly overstating risk for anyone paying down a mortgage
+              during accumulation. Fixed.
+            </li>
+            <li>
+              <strong>Account editor no longer clips off-screen.</strong>
+              Tall account forms (debt accounts, property sale settings) now
+              scroll within the dialog instead of pushing the Save button
+              below the viewport.
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">Accuracy refinements</h3>
+          <ul>
+            <li>
+              <strong>Contributions step like real IRS limits.</strong>
+              Tax-advantaged contributions no longer inflate in smooth
+              fractions of a dollar — they now step in $500 increments with
+              a one-year lag, mirroring how the IRS actually rolls 401(k)
+              and IRA limits. A small, honest haircut to long-horizon
+              projections.
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">UI improvements</h3>
+          <ul>
+            <li>
+              <strong>Plain-English tooltips on the Monte Carlo card.</strong>
+              Hover any term — success rate, accumulation, drawdown,
+              percentiles, volatility, return model, stress tests — for an
+              explanation written for people who don&rsquo;t read retirement
+              forums for fun. No jargon required to understand your own plan.
+            </li>
+          </ul>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">Known limitations carried into a future patch</h3>
+          <ul>
+            <li>
+              Survivor modeling keeps the household filing married-joint
+              after a spouse&rsquo;s death. The switch to single filing
+              (smaller standard deduction, tighter brackets and IRMAA
+              thresholds) is not yet modeled, so plans with large post-death
+              Roth conversions will look slightly rosier than reality.
+            </li>
+            <li>
+              Adjustable-rate loans support one scheduled rate change.
+              Multi-step ARM schedules (annual adjustment cadences, lifetime
+              caps) may come later if there&rsquo;s demand.
+            </li>
+            <li>
+              Automatic sale gains use your account&rsquo;s <em>equity</em>
+              minus cost basis, since the app tracks equity rather than
+              market price. For exact figures, the net-proceeds override
+              remains the precise path.
+            </li>
+          </ul>
+        </article>
 
         <article id="v2026-0-1" class="scroll-mt-24">
           <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
@@ -84,7 +285,7 @@
             subtract from net worth; a <strong>Property Sale Event</strong>
             feature; and an expanded <strong>Cash Flow</strong> diagram that
             now covers your entire lifetime instead of just retirement.
-            Free download for existing 2026 customers via your Lemon Squeezy
+            Free download for all customers via your Lemon Squeezy
             customer portal.
           </p>
 
