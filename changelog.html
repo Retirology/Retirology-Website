@@ -90,6 +90,48 @@
           </p>
         </article>
 
+        <article id="v2026-0-3" class="scroll-mt-24">
+          <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
+            <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">2026.0.3</h2>
+            <span class="text-sm text-slate-500">Released 2026-09-11</span>
+            <span class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">Patch</span>
+          </div>
+
+          <p class="mt-5">
+            <strong>Intel Mac fix.</strong> If you run Retirology on an
+            Intel-based Mac, previous builds failed to start with
+            <em>&ldquo;Couldn&rsquo;t start Retirology &mdash; Backend did not
+            become ready within 35s.&rdquo;</em> This release fixes that. There
+            is no change for Apple&nbsp;silicon Macs, Windows, or Linux, and no
+            change to any calculation.
+          </p>
+
+          <h3 class="mt-6 text-base font-bold text-slate-900">Fixed</h3>
+          <ul>
+            <li>
+              <strong>Intel Macs could not launch the app.</strong> Our build
+              pipeline packaged the Apple&nbsp;silicon version of Retirology&rsquo;s
+              calculation engine into the Intel download by mistake. Intel
+              hardware cannot run that file, so the engine never started and
+              the app stopped at the loading screen. The Intel and Apple
+              silicon downloads are now each built on their own matching
+              hardware, and the pipeline refuses to publish a build whose
+              engine doesn&rsquo;t match its installer. Affected versions:
+              2026.0.0, 2026.0.1, and 2026.0.2.
+            </li>
+          </ul>
+
+          <p class="mt-5">
+            <strong>On an Intel Mac?</strong> Download 2026.0.3 from your
+            <a href="https://app.lemonsqueezy.com/my-orders">Lemon Squeezy customer portal</a>
+            and reinstall over your existing copy. <strong>Your saved plans are
+            safe</strong> &mdash; your data lives outside the app and is
+            untouched by reinstalling. Not sure which Mac you have? Apple menu
+            &rarr; About This Mac: anything listing an Intel processor needs
+            this update.
+          </p>
+        </article>
+
         <article id="v2026-0-2" class="scroll-mt-24">
           <div class="flex flex-wrap items-baseline gap-3 border-b border-slate-200 pb-3">
             <h2 class="!mt-0 !mb-0 text-2xl font-extrabold tracking-tight text-slate-900">2026.0.2</h2>
