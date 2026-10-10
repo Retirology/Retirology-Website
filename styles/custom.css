@@ -189,6 +189,22 @@ details[open] > summary .chev {
   border: 1px solid var(--slate-300);
 }
 
+/* Hero screenshot crossfade (index.html). The framed screenshots carry
+   their own window chrome and shadow, so no .shot frame here. */
+.hero-slides {
+  position: relative;
+  aspect-ratio: 1600 / 1035;
+}
+.hero-slides img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+.hero-slides img.is-active { opacity: 1; }
+
 /* Code chips — for OS paths, install steps. */
 .kbd {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -200,43 +216,94 @@ details[open] > summary .chev {
   color: var(--slate-900);
 }
 
-/* Long-form prose (privacy/changelog pages) */
-.prose-rt h2 {
+/* Long-form prose (privacy/changelog/guide pages). Rules skip anything
+   inside a .not-prose block (cards, FAQ lists, call-to-action boxes). */
+.prose-rt h2:not(.not-prose *) {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.3;
   color: var(--slate-900);
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   margin-bottom: 0.75rem;
 }
-.prose-rt h3 {
+.prose-rt h3:not(.not-prose *) {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--slate-900);
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   margin-bottom: 0.5rem;
 }
-.prose-rt p,
-.prose-rt li {
+.prose-rt p:not(.not-prose *),
+.prose-rt li:not(.not-prose *) {
   color: var(--slate-700);
   line-height: 1.7;
 }
-.prose-rt p { margin-bottom: 1rem; }
-.prose-rt ul {
+.prose-rt p:not(.not-prose *) { margin-bottom: 1rem; }
+.prose-rt li:not(.not-prose *) { margin-bottom: 0.35rem; }
+.prose-rt ul:not(.not-prose *) {
   list-style: disc;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
 }
-.prose-rt ol {
+.prose-rt ol:not(.not-prose *) {
   list-style: decimal;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
 }
-.prose-rt a {
+.prose-rt a:not(.not-prose *) {
   color: var(--brand-green);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.prose-rt a:hover { color: #15803d; }
+.prose-rt a:not(.not-prose *):hover { color: #15803d; }
+.prose-rt strong:not(.not-prose *) { color: var(--slate-900); font-weight: 600; }
+.prose-rt figure:not(.not-prose *) { margin: 1.75rem 0; }
+.prose-rt figcaption { font-size: 0.875rem; color: var(--slate-500); margin-top: 0.25rem; text-align: center; }
+.prose-rt .callout {
+  border-left: 3px solid var(--brand-green);
+  background: var(--slate-50);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.25rem 0 1.5rem;
+}
+.prose-rt .callout p:last-child { margin-bottom: 0; }
+
+/* Data tables (state pages, comparisons). Wrapped so they scroll sideways
+   on phones instead of widening the page. */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+}
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+}
+.table-wrap th,
+.table-wrap td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: var(--slate-700);
+}
+.table-wrap th {
+  background: var(--slate-50);
+  color: var(--slate-900);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.table-wrap tr:last-child td { border-bottom: 0; }
+.table-wrap .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.table-wrap th button { font: inherit; color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
+.prose-rt .table-wrap td a, .table-wrap td a { color: var(--slate-900); font-weight: 600; text-decoration: none; }
+.prose-rt .table-wrap td a:hover, .table-wrap td a:hover { color: var(--brand-green); }
+.table-wrap .yes { color: var(--brand-green); font-weight: 600; }
+.table-wrap .no { color: var(--slate-500); }
 
 /* Focus states — visible everywhere for keyboard users. */
 a:focus-visible,

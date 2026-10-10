@@ -1,0 +1,16 @@
+/* Tailwind input for styles/site.css — compiled by build-css.mjs.
+   Replaces the Tailwind Play CDN (runtime CSS generation slowed first paint). */
+@import "tailwindcss" source(none);
+
+@theme {
+  --color-brand-red: #dc2626;
+  --color-brand-amber: #f59e0b;
+  --color-brand-green: #16a34a;
+  --font-sans: "Geom", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Tailwind v3 defaults the site was written against. */
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button { border-color: var(--color-gray-200, currentcolor); }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
+}

@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#16a34a" />
-  <title>Retirology — FIRE planning without the subscription</title>
-  <meta name="description" content="Affordable alternative to YNAB, Monarch, ProjectionLab, and Boldin. Professional FIRE planning as a one-time $19+ purchase — Roth ladders, Monte Carlo, ACA optimization, full 51-state tax. Local-only. No accounts." />
+  <title>Retirology — FIRE &amp; Retirement Planning Software, No Subscription</title>
+  <meta name="description" content="Retirement and FIRE planner for your desktop: Roth ladders, ACA subsidies, Monte Carlo and 2026 state taxes. $19+ once — no subscription, no account." />
   <link rel="canonical" href="https://retirology.app/" />
 
   <!-- Favicons -->
@@ -16,40 +16,23 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Retirology" />
   <meta property="og:title" content="Retirology — FIRE planning without the subscription" />
-  <meta property="og:description" content="Affordable alternative to YNAB, Monarch, ProjectionLab, and Boldin. FIRE planning as a one-time $19+ purchase. Local-only. No accounts." />
+  <meta property="og:description" content="Desktop retirement planner for early retirees: Roth ladders, ACA subsidies, Monte Carlo and every state's 2026 tax rules. $19+ once. Local-only. No account." />
   <meta property="og:url" content="https://retirology.app/" />
   <meta property="og:image" content="https://retirology.app/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Retirology — FIRE planning without the subscription" />
-  <meta name="twitter:description" content="Affordable alternative to YNAB, Monarch, ProjectionLab, and Boldin. FIRE planning as a one-time $19+ purchase. Local-only. No accounts." />
+  <meta name="twitter:description" content="Desktop retirement planner for early retirees: Roth ladders, ACA subsidies, Monte Carlo and every state's 2026 tax rules. $19+ once. Local-only. No account." />
   <meta name="twitter:image" content="https://retirology.app/assets/og-image.png" />
 
-  <!-- Tailwind v3 via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red:   '#dc2626',
-              amber: '#f59e0b',
-              green: '#16a34a',
-            },
-          },
-          fontFamily: {
-            sans: ['Geom', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          maxWidth: { '6.5xl': '76rem' },
-        },
-      },
-    };
-  </script>
-
+  <!-- site:css -->
+  <link rel="stylesheet" href="styles/site.css" />
   <link rel="stylesheet" href="styles/custom.css" />
+  <!-- /site:css -->
+  <link rel="preload" as="image" href="screenshots/mission-control.webp" fetchpriority="high" />
 
   <!-- Lemon Squeezy overlay checkout -->
   <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
@@ -62,14 +45,29 @@
     "name": "Retirology",
     "operatingSystem": "macOS, Windows, Linux",
     "applicationCategory": "FinanceApplication",
-    "description": "Privacy-first FIRE and retirement planning desktop app — an affordable, local-only alternative to YNAB, Monarch, ProjectionLab, Boldin, MaxiFi Planner, and Pralana. Buy once from $19 and get every future version free — not a subscription. Path to FI, drawdown strategy, Roth conversion ladders, Monte Carlo, ACA optimization, full state tax modeling. No accounts, no telemetry.",
-    "featureList": "Two-minute onboarding, Path-to-FI accumulation modeling, Budget analysis, Drawdown plan with year-by-year simulation, Roth conversion ladders (4 modes), Monte Carlo simulator with historical bootstrap, Historical stress tests (1929, 1973-74, 2000, 2008, 2022), Sankey cash flow, Multi-scenario comparison, Full state + locality income tax across all four federal filing statuses",
-    "screenshot": "https://retirology.app/screenshots/mission-control.png",
+    "softwareVersion": "2026.0.4",
+    "description": "Privacy-first retirement and FIRE planning desktop app — a one-time-purchase alternative to ProjectionLab, Boldin, MaxiFi Planner and Pralana. Buy once from $19 and get every future version free. Roth conversion ladders, ACA subsidy planning, Monte Carlo, Social Security and 2026 tax rules for all 50 states and DC. No account, no telemetry.",
+    "featureList": "Optimize my plan, Mission Control with projected FI date, Path-to-FI accumulation, Budget analysis, Year-by-year drawdown, Roth conversion ladders (Auto-fill, Spend-driven, Zero-tax, Manual), ACA subsidy optimization, 72(t) SEPP and Rule of 55, Social Security with spousal benefits, 2026 state income tax for all 50 states and DC with retirement exclusions, Monte Carlo (normal and historical), Historical stress tests (1929, 1973, 2000, 2008, 2022), Sankey cash flow, Scenario comparison, PDF export",
+    "screenshot": "https://retirology.app/screenshots/mission-control.webp",
+    "url": "https://retirology.app/",
     "offers": {
       "@type": "Offer",
       "price": "19.00",
-      "priceCurrency": "USD"
-    }
+      "priceCurrency": "USD",
+      "url": "https://retirology.app/#pricing"
+    },
+    "publisher": { "@type": "Organization", "name": "Retirology", "url": "https://retirology.app/", "logo": "https://retirology.app/assets/logo.png", "email": "contact@retirology.app" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Retirology",
+    "url": "https://retirology.app/",
+    "logo": "https://retirology.app/assets/logo.png",
+    "email": "contact@retirology.app",
+    "sameAs": ["https://www.producthunt.com/products/retirology"]
   }
   </script>
 </head>
@@ -79,44 +77,58 @@
     Skip to content
   </a>
 
-  <!-- ───────── Sticky nav ───────── -->
+  <!-- site:header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/85 border-b border-slate-200">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
       <a href="index.html" class="flex items-center gap-2.5" aria-label="Retirology home">
         <img src="assets/logo.png" alt="" width="32" height="32" class="rounded-full" />
         <span class="font-bold text-lg tracking-tight">Retirology</span>
       </a>
       <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Primary">
-        <a href="#features"  class="hover:text-slate-900">Features</a>
-        <a href="#privacy"   class="hover:text-slate-900">Privacy</a>
-        <a href="#pricing"   class="hover:text-slate-900">Pricing</a>
+        <a href="index.html#features" class="hover:text-slate-900">Features</a>
+        <a href="retirement-taxes/" class="hover:text-slate-900">State taxes</a>
+        <a href="guides/" class="hover:text-slate-900">Guides</a>
+        <a href="alternatives/" class="hover:text-slate-900">Compare</a>
+        <a href="index.html#pricing" class="hover:text-slate-900">Pricing</a>
       </nav>
-      <a href="#pricing" class="inline-flex items-center gap-1.5 rounded-lg btn-brand-gradient text-white text-sm font-semibold px-3.5 py-2 transition">
-        Buy
-        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
-      </a>
+      <div class="flex items-center gap-2">
+        <details class="md:hidden relative">
+          <summary class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700">Menu</summary>
+          <nav class="absolute right-0 mt-2 w-48 rounded-xl border border-slate-200 bg-white p-2 text-sm font-medium text-slate-700 shadow-lg" aria-label="Mobile">
+          <a href="index.html#features" class="block rounded-md px-3 py-2 hover:bg-slate-100">Features</a>
+          <a href="retirement-taxes/" class="block rounded-md px-3 py-2 hover:bg-slate-100">State taxes</a>
+          <a href="guides/" class="block rounded-md px-3 py-2 hover:bg-slate-100">Guides</a>
+          <a href="alternatives/" class="block rounded-md px-3 py-2 hover:bg-slate-100">Compare</a>
+          <a href="index.html#pricing" class="block rounded-md px-3 py-2 hover:bg-slate-100">Pricing</a>
+          </nav>
+        </details>
+        <a href="index.html#pricing" class="inline-flex items-center gap-1.5 rounded-lg btn-brand-gradient text-white text-sm font-semibold px-3.5 py-2 transition">
+          Buy
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
     </div>
   </header>
+  <!-- /site:header -->
 
   <main id="main">
 
     <!-- ───────── Hero ───────── -->
     <section class="hero-halo">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-16 sm:pt-20 pb-10 sm:pb-14">
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          <div class="lg:col-span-6">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-14 sm:pt-20 pb-10 sm:pb-14">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div class="lg:col-span-5">
             <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-green bg-green-50 border border-green-200 rounded-full px-3 py-1">
               <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
               Buy once · Every future version free
             </p>
-            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
+            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.05]">
               FIRE planning
               <span class="brand-gradient-text-reverse">without the subscription.</span>
             </h1>
             <p class="mt-5 text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed">
-              Professional-grade retirement analysis as a one-time purchase — not a $20–$40/month rental.
-              Roth conversion ladders, Monte Carlo, ACA optimization, full 51-state tax modeling.
-              Runs on your machine. No accounts. Your numbers stay yours.
+              Retirement planning software you buy once, built for retiring early: Roth conversion ladders, ACA subsidies, Monte Carlo, Social Security and 2026 tax rules for every state.
+              It runs on your computer. No account. Your numbers stay yours.
             </p>
             <div class="mt-7 flex flex-wrap items-center gap-3">
               <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg btn-brand-gradient text-white font-semibold px-5 py-3 transition">
@@ -128,21 +140,17 @@
               </a>
             </div>
             <p class="mt-5 text-sm text-slate-500">
-              macOS · Windows · Linux
+              macOS · Windows · Linux &middot; Version 2026.0.4 — <a href="changelog.html" class="underline underline-offset-2 hover:text-slate-900">what's new</a>
             </p>
           </div>
 
-          <div class="lg:col-span-6">
-            <div class="shot gradient-ring gradient-ring-glow">
-              <video
-                id="hero-video"
-                poster="screenshots/mission-control.png"
-                autoplay muted loop playsinline preload="metadata"
-                width="2400" height="1500"
-                aria-label="Walkthrough of Retirology clicking through the main views — accumulation, drawdown, Roth ladder, Monte Carlo, and Sankey cash flow">
-                <source src="assets/video/hero.webm" type="video/webm" />
-                <source src="assets/video/hero.mp4"  type="video/mp4"  />
-              </video>
+          <div class="lg:col-span-7">
+            <!-- Rotating screenshots (a still image for reduced-motion users). -->
+            <div class="hero-slides" id="hero-slides" aria-roledescription="carousel" aria-label="Retirology screens">
+              <img src="screenshots/mission-control.webp" width="1600" height="1035" fetchpriority="high" class="is-active" alt="Retirology's Mission Control: 43% of the way to a $1.47M FI target, on track to reach it 5 years early, plan analysis checks and a 79% Monte Carlo success rate" />
+              <img src="screenshots/drawdown.webp" width="1600" height="1035" loading="lazy" alt="Drawdown view showing which accounts pay for each year of retirement, with lifetime taxes, Roth conversions and healthcare costs" />
+              <img src="screenshots/optimize.webp" width="1600" height="1035" loading="lazy" alt="Optimize my plan recommending a lower ACA income target and a SEPP carve-out, with the after-tax gain from each change" />
+              <img src="screenshots/retirement-cash-flow.webp" width="1600" height="1035" loading="lazy" alt="Sankey diagram of one retirement year's cash flow from withdrawals to spending, taxes and healthcare" />
             </div>
           </div>
         </div>
@@ -151,7 +159,7 @@
       <!-- Trust strip -->
       <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-12">
         <p class="text-center text-sm text-slate-600">
-          $19+ once, never again &middot; No subscription &middot; No accounts &middot; No data collection &middot; Runs offline
+          $19+ once, every update free &middot; No subscription &middot; No account &middot; No data collection &middot; Runs offline
         </p>
       </div>
     </section>
@@ -163,63 +171,63 @@
           <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">What it does</p>
           <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Everything you need to plan a serious retirement.</h2>
           <p class="mt-4 text-lg text-slate-600">
-            Most retirement calculators give you a single number. Retirology models the whole arc — accumulation through drawdown — and lets you stress-test the plan against bad markets, tax law, and your own assumptions.
+            Most retirement calculators give you a single number. Retirology models the whole arc — saving, then drawing down every account — with the taxes, healthcare and penalties that decide whether an early retirement works, and tells you what to change.
           </p>
         </div>
 
-        <div class="mt-14 grid md:grid-cols-2 gap-10 lg:gap-12">
+        <div class="mt-14 grid md:grid-cols-2 gap-x-10 gap-y-14 lg:gap-x-12">
 
-          <!-- Onboarding wizard -->
+          <!-- Mission Control -->
           <article class="h-full flex flex-col">
             <div class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l-3-3"/><path d="M21 17H8l3 3"/></svg>
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13l4-4"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/></svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold tracking-tight">Two-minute onboarding</h3>
+                <h3 class="text-xl font-bold tracking-tight">Mission Control</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  A four-step wizard — about you, accounts, spending, strategies — gets a plan personalized in roughly two minutes. Defaults are sane, every value is editable later, and nothing locks you in.
+                  One screen with where you stand: progress to your FI target, the date your savings get there and whether that's ahead of schedule, your Monte Carlo odds against your goal, and personalized checks on what to fix first.
                 </p>
               </div>
             </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/onboarding.png" alt="Retirology onboarding wizard showing the About You step with age, target retirement age, filing status, and state inputs" loading="lazy" />
+            <div class="mt-auto pt-5">
+              <img src="screenshots/mission-control.webp" width="1600" height="1035" loading="lazy" alt="Mission Control showing progress to the FI target, projected FI date, plan analysis and Monte Carlo success rate" />
             </div>
           </article>
 
-          <!-- Path to FI -->
-          <article class="h-full flex flex-col">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold tracking-tight">Path to FI</h3>
-                <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Multi-bucket accumulation modeling — taxable, traditional, Roth, HSA — with per-account growth rates, employer match, HSA tax credit, and inflation-adjusted projections. Your FI target is derived from a built-in budget analyzer (category-by-category), so it reflects what you actually spend, not a guessed round number.
-                </p>
-              </div>
-            </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/accumulation.png" alt="Accumulation projection chart showing portfolio growth across taxable, traditional, Roth, and HSA buckets over time" loading="lazy" />
-            </div>
-          </article>
-
-          <!-- Drawdown plan -->
+          <!-- Optimize my plan -->
           <article class="h-full flex flex-col">
             <div class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-amber-50 text-brand-amber flex items-center justify-center" aria-hidden="true">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4v16h18"/><path d="M7 16l4-6 4 3 4-7"/></svg>
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/><path d="M17.8 11.8 19 13"/><path d="M15 9h.01"/><path d="M17.8 6.2 19 5"/><path d="m3 21 9-9"/><path d="M12.2 6.2 11 5"/></svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold tracking-tight">Drawdown plan</h3>
+                <h3 class="text-xl font-bold tracking-tight">Optimize my plan <span class="ml-1 align-middle text-[10px] font-bold uppercase tracking-widest text-white bg-brand-green px-2 py-0.5 rounded-full">New</span></h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Year-by-year retirement simulation with income sourcing, MAGI strategy, ACA premium-subsidy optimization, SEPP 72(t), RMDs, Social Security claim ages, and full state + locality income tax for 51 states — across all four federal filing statuses (single, MFJ, head of household, MFS).
+                  Your Roth ladder, ACA income target and SEPP choice affect each other, so tuning them one at a time rarely finds the best mix. One click tries them together, keeps whatever leaves you the most after tax, and explains every change in dollars.
                 </p>
               </div>
             </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/drawdown.png" alt="Drawdown view showing year-by-year retirement simulation: starting net worth, income sourcing breakdown, and MAGI strategy" loading="lazy" />
+            <div class="mt-auto pt-5">
+              <img src="screenshots/optimize.webp" width="1600" height="1035" loading="lazy" alt="Optimize my plan results with the after-tax effect of changing the ACA income target and adding a SEPP carve-out" />
+            </div>
+          </article>
+
+          <!-- State taxes -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Every state's 2026 tax rules</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  All 50 states and DC under 2026 law, including the breaks most states give retirees: retirement-income exclusions by age, income-tested Social Security and capital-gains breaks — explained in plain English. <a href="retirement-taxes/" class="text-brand-green underline underline-offset-2">See every state</a>.
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-5">
+              <img src="screenshots/state-tax.webp" width="1600" height="1035" loading="lazy" alt="Tax assumptions with the state picker and a plain-English summary of how Colorado taxes retirees in 2026" />
             </div>
           </article>
 
@@ -230,50 +238,104 @@
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4v-4H4z"/><path d="M10 16h4v-4h-4z"/><path d="M16 12h4V8h-4z"/><path d="M4 20l16-12"/></svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold tracking-tight">Roth conversion ladders</h3>
+                <h3 class="text-xl font-bold tracking-tight">Roth ladders and ACA subsidies</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Four ladder modes — fill-the-bracket, ACA-cap, fixed-amount, and target-RMD — with year-by-year schedules showing conversion amounts, taxes paid, and the resulting Roth balance through your modeled retirement horizon.
+                  Four conversion modes — Auto-fill to your ACA cap, Spend-driven, Zero-tax and Manual — with each conversion's 5-year clock tracked. MAGI is held under the 2026 subsidy cliff, and 72(t) SEPP and the Rule of 55 cover the years before 59½. <a href="guides/roth-conversion-ladder.html" class="text-brand-green underline underline-offset-2">How ladders work</a>.
                 </p>
               </div>
             </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/roth-ladder.png" alt="Roth conversion ladder schedule showing year-by-year conversion amounts, taxes paid, and resulting Roth balance" loading="lazy" />
+            <div class="mt-auto pt-5">
+              <img src="screenshots/withdrawal-strategy.webp" width="1600" height="1035" loading="lazy" alt="Withdrawal strategy settings: ACA optimization target and the four Roth conversion ladder modes" />
             </div>
           </article>
 
-          <!-- Monte Carlo -->
+          <!-- Drawdown plan -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-amber-50 text-brand-amber flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4v16h18"/><path d="M7 16l4-6 4 3 4-7"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Year-by-year drawdown</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Every account tracked on its own, drawn in the order you choose, through federal and state tax, the 3.8% NIIT, early-withdrawal penalties, RMDs and Medicare IRMAA — across all four filing statuses, including survivor years. Totals are in today's dollars.
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-5">
+              <img src="screenshots/drawdown.webp" width="1600" height="1035" loading="lazy" alt="Drawdown view with income sources by year and lifetime taxes, Roth conversions and healthcare" />
+            </div>
+          </article>
+
+          <!-- Social Security -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M14 20a4.5 4.5 0 0 1 7 0"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Social Security, done properly</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Your birth year's exact full retirement age, what each claim age pays, spousal benefits, and the survivor rule when one of you dies first — with inheritance and the right filing status afterwards.
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-5">
+              <img src="screenshots/social-security.webp" width="1600" height="1035" loading="lazy" alt="Social Security settings with benefit at full retirement age, claim ages for both spouses and spousal benefit notes" />
+            </div>
+          </article>
+
+          <!-- Path to FI -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-brand-green flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Path to FI, from your real budget</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Per-account growth and contributions (with 2026 limits and catch-ups), employer match and HSA. Your FI target comes from a category-by-category budget and a simulation of your actual plan — not a guessed round number.
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-5">
+              <img src="screenshots/accumulation.webp" width="1600" height="1035" loading="lazy" alt="Accumulation view with balances, annual contributions, the FI target and projected balances to retirement" />
+            </div>
+          </article>
+
+          <!-- Budget -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-amber-50 text-brand-amber flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Budget analysis</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  Paycheck and recurring expenses by category, your real savings rate, and how many years until you reach FI — plus a schedule for the changes ahead, like a paid-off mortgage or kids leaving home.
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-5">
+              <img src="screenshots/budget-analysis.webp" width="1600" height="1035" loading="lazy" alt="Budget analysis with spending by category, savings rate and years to FI" />
+            </div>
+          </article>
+
+          <!-- Monte Carlo + stress tests -->
           <article class="h-full flex flex-col">
             <div class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-red-50 text-brand-red flex items-center justify-center" aria-hidden="true">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold tracking-tight">Monte Carlo</h3>
-                <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Normal-distribution sampling and historical bootstrap mode pulling from a bundled 1928–2024 dataset (S&amp;P 500, 10-yr Treasury, T-bills, CPI). Get a real success-rate distribution, not a single optimistic line.
-                </p>
-              </div>
-            </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/monte-carlo.png" alt="Monte Carlo success-rate fan chart with percentile bands across thousands of simulated retirement paths" loading="lazy" />
-            </div>
-          </article>
-
-          <!-- Stress tests -->
-          <article class="h-full flex flex-col">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center" aria-hidden="true">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold tracking-tight">Historical stress tests</h3>
+                <h3 class="text-xl font-bold tracking-tight">Monte Carlo and stress tests</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Replay your plan against the actual sequences from 1929, 1973–74, 2000, 2008, and 2022. See exactly when a real bad market would have broken it — and by how much.
+                  Run the whole plan — taxes and all — through hundreds of random or historical market sequences (1928–2024 data), see bad-luck, typical and good-luck outcomes, and replay retiring in 1929, 1973, 2000, 2008 and 2022.
                 </p>
               </div>
             </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/stress-tests.png" alt="Stress test results comparing portfolio outcomes across the 1929, 1973-74, 2000, 2008, and 2022 historical sequences" loading="lazy" />
+            <div class="mt-auto pt-5">
+              <img src="screenshots/stress-tests.webp" width="1600" height="1035" loading="lazy" alt="Monte Carlo results and historical stress tests for 1929, 1973, 2000, 2008 and 2022" />
             </div>
           </article>
 
@@ -284,14 +346,14 @@
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6c4 0 5 12 9 12h3"/><path d="M3 12h6c4 0 5 0 9 0h3"/><path d="M3 18h6c4 0 5-12 9-12h3"/></svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold tracking-tight">Sankey cash flow</h3>
+                <h3 class="text-xl font-bold tracking-tight">Cash flow you can see</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Trace every dollar through retirement — from accounts and Social Security through Roth conversions, taxes, ACA premiums, and spending. See where the money actually goes.
+                  Trace every dollar of any year — from accounts and Social Security, through taxes and healthcare, to what you actually spend. Scrub through the years from your first working year to your last.
                 </p>
               </div>
             </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/retirement-cash-flow.png" alt="Retirement cash-flow Sankey diagram with a year scrubber: withdrawal sources pool into a single year's cash, then flow out to spending categories (housing, utilities, food, healthcare, taxes, lifestyle), with KPI tiles for gross sources, tax + penalty, healthcare, lifestyle, and reinvested amounts" loading="lazy" />
+            <div class="mt-auto pt-5">
+              <img src="screenshots/retirement-cash-flow.webp" width="1600" height="1035" loading="lazy" alt="Sankey cash-flow diagram for one retirement year with withdrawal sources flowing to spending categories, taxes and healthcare" />
             </div>
           </article>
 
@@ -302,17 +364,42 @@
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/></svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold tracking-tight">Multi-scenario comparison</h3>
+                <h3 class="text-xl font-bold tracking-tight">Compare scenarios</h3>
                 <p class="mt-1.5 text-slate-600 leading-relaxed">
-                  Save plans, then put any two side by side — different claim ages, ladder strategies, retirement years, geographies. The optimizer surfaces the meaningful differences automatically.
+                  Save plans and put any two side by side — retire at 46 or 50, claim at 62 or 70, stay or move states — with the differences highlighted, from FI date to lifetime tax and after-tax money left.
                 </p>
               </div>
             </div>
-            <div class="shot mt-auto pt-5">
-              <img src="screenshots/compare.png" alt="Side-by-side comparison view of two saved retirement plans with key metrics and differences highlighted" loading="lazy" />
+            <div class="mt-auto pt-5">
+              <img src="screenshots/compare.webp" width="1600" height="1035" loading="lazy" alt="Side-by-side comparison of two saved plans with the better value in each row highlighted" />
             </div>
           </article>
 
+          <!-- Onboarding -->
+          <article class="h-full flex flex-col">
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center" aria-hidden="true">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l-3-3"/><path d="M21 17H8l3 3"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight">Set up in minutes</h3>
+                <p class="mt-1.5 text-slate-600 leading-relaxed">
+                  A short wizard — about you, your spouse, accounts, spending, strategies — gets a personalized plan in a couple of minutes. Defaults are sensible and everything is editable later, down to each account's dividend yield.
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-5">
+              <img src="screenshots/onboarding.webp" width="1600" height="1035" loading="lazy" alt="Onboarding wizard's first step with birth date, target retirement age, filing status and state" />
+            </div>
+          </article>
+
+        </div>
+
+        <div class="mt-16 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+          <p class="font-bold text-slate-900">Also modeled</p>
+          <p class="mt-2 text-slate-600 leading-relaxed">
+            Spouse still working after you retire · dependents for ACA household size · lifestyle changes over time · one-time expenses · property sales with the home-sale exclusion · mortgages and ARMs that pay off · pensions and annuities with survivor benefits · HSAs · dividends and capital gains · cash interest · per-person Medicare and IRMAA · heirs' tax on what's left · PDF export of your plan.
+          </p>
         </div>
       </div>
     </section>
@@ -324,7 +411,7 @@
           <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Alternative to</p>
           <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Most planning tools rent themselves to you. We don't.</h2>
           <p class="mt-4 text-lg text-slate-600 leading-relaxed">
-            If you've been comparing budgeting tools like <strong class="text-slate-900">YNAB</strong> or <strong class="text-slate-900">Monarch</strong>, paid retirement planners like <strong class="text-slate-900">ProjectionLab</strong>, <strong class="text-slate-900">Boldin</strong> (formerly NewRetirement), <strong class="text-slate-900">MaxiFi Planner</strong>, or <strong class="text-slate-900">Pralana</strong>, or you've outgrown the <strong class="text-slate-900">Personal Financial Toolbox</strong> spreadsheets — Retirology covers what most of them do (and more), at a one-time price typically less than a single year of any of their subscriptions.
+            If you've been comparing retirement planners like <a href="alternatives/projectionlab.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">ProjectionLab</a>, <a href="alternatives/boldin.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">Boldin</a> (formerly NewRetirement), <a href="alternatives/maxifi.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">MaxiFi Planner</a> or <a href="alternatives/pralana.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">Pralana</a>, budgeting apps like <a href="alternatives/monarch.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">Monarch</a> or <a href="alternatives/ynab.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">YNAB</a>, or you've outgrown spreadsheets and <a href="alternatives/free-fire-calculators.html" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900">free FIRE calculators</a> — Retirology covers the retirement math for less than a single year of any of their subscriptions. <a href="alternatives/" class="text-brand-green underline underline-offset-2">See the comparisons</a>.
           </p>
         </div>
 
@@ -334,15 +421,15 @@
           <div class="rounded-2xl border border-slate-300 bg-white p-7 flex flex-col">
             <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Typical subscription planner</p>
             <p class="mt-3 flex items-baseline gap-2">
-              <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">$240–$480</span>
+              <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">$100–$170</span>
               <span class="text-slate-500 font-medium">/ year, every year</span>
             </p>
-            <p class="mt-1 text-sm text-slate-500">$20–$40/month — paid in perpetuity</p>
+            <p class="mt-1 text-sm text-slate-500">$1,000–$1,700 over ten years of planning</p>
             <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
               <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Account required</li>
               <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Your financial data on their servers</li>
               <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Lose access if you stop paying</li>
-              <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Subject to their next price hike</li>
+              <li class="flex gap-2"><span class="text-slate-400 shrink-0">✗</span> Subject to their next price increase</li>
             </ul>
           </div>
 
@@ -356,7 +443,7 @@
               <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">$19+</span>
               <span class="text-slate-500 font-medium">once</span>
             </p>
-            <p class="mt-1 text-sm text-slate-500">$65 suggested — about a single month of an advisor</p>
+            <p class="mt-1 text-sm text-slate-500">$65 suggested — less than half a year of a typical subscription</p>
             <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
               <li class="flex gap-2"><span class="text-brand-green shrink-0">✓</span> No account, ever</li>
               <li class="flex gap-2"><span class="text-brand-green shrink-0">✓</span> Local SQLite — your machine, your data</li>
@@ -367,7 +454,7 @@
         </div>
 
         <p class="mt-8 text-sm text-slate-500 max-w-3xl">
-          Even at the suggested $65 tier, Retirology costs less than two months of a typical subscription planner — and you keep using it after.
+          Subscription range based on the published annual prices of popular planners and budgeting apps in October 2026. Even at the suggested $65, Retirology costs less than one year of any of them — and you keep it.
         </p>
       </div>
     </section>
@@ -464,7 +551,7 @@
               <span class="text-slate-500 font-medium">one-time</span>
             </p>
             <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-              Roughly a single month of a typical advisor subscription — except you own it, updates and all.
+              Less than half a year of a typical planner subscription — except you own it, updates and all.
             </p>
             <ul class="mt-5 space-y-2 text-sm text-slate-700">
               <li class="flex gap-2"><span class="text-brand-green">✓</span> Everything in Floor</li>
@@ -502,6 +589,43 @@
         <p class="mt-8 text-sm text-slate-500 text-center max-w-2xl mx-auto">
           Every update is <span class="font-semibold text-slate-700">free, forever</span> — patches, new features, and the annual releases with refreshed tax tables. Buy once, and you never pay again. Re-download any version anytime from your account.
         </p>
+      </div>
+    </section>
+
+    <!-- ───────── Learn ───────── -->
+    <section id="learn" class="py-20 sm:py-24 hairline">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Learn</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">The moves that make an early retirement work.</h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">Free, plain-English guides — no sign-up.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="retirement-taxes/" class="block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-400 transition">
+            <p class="font-bold tracking-tight text-slate-900">How every state taxes retirement income</p>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">All 50 states and DC under 2026 law, with what a typical retired couple pays in each.</p>
+          </a>
+          <a href="guides/roth-conversion-ladder.html" class="block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-400 transition">
+            <p class="font-bold tracking-tight text-slate-900">The Roth conversion ladder, explained</p>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Reach 401(k) and IRA money before 59½ without the penalty, and what it costs in 2026.</p>
+          </a>
+          <a href="guides/aca-subsidy-cliff.html" class="block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-400 transition">
+            <p class="font-bold tracking-tight text-slate-900">The ACA subsidy cliff in 2026</p>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Where the 400% line is, what counts toward it, and how early retirees stay under it.</p>
+          </a>
+          <a href="guides/rule-of-55-vs-72t.html" class="block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-400 transition">
+            <p class="font-bold tracking-tight text-slate-900">Rule of 55 vs. 72(t)</p>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Two ways to take retirement money early without the 10% penalty — and their traps.</p>
+          </a>
+          <a href="guides/monte-carlo-success-rate.html" class="block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-400 transition">
+            <p class="font-bold tracking-tight text-slate-900">What your Monte Carlo success rate means</p>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">A sensible target, why 100% is the wrong goal, and the assumptions that move it.</p>
+          </a>
+          <a href="guides/fi-number.html" class="block rounded-xl border border-slate-200 bg-white p-6 hover:border-slate-400 transition">
+            <p class="font-bold tracking-tight text-slate-900">How to work out your FI number</p>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Why 25× spending is only a start, and what taxes, healthcare and Social Security change.</p>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -572,6 +696,26 @@
 
           <details class="group p-5 sm:p-6">
             <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">Does it handle my state's taxes?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Yes — all 50 states and DC under 2026 law, including the rules that matter to retirees: retirement-income exclusions by age, how Social Security is taxed, capital-gains breaks, and rate changes already passed for later years. Local income taxes like New York City's are included too. <a class="text-brand-green underline underline-offset-2" href="retirement-taxes/">See how your state taxes retirees</a>.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-semibold text-slate-900">Does it connect to my bank or brokerage?</span>
+              <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              No, on purpose. You type in your balances — a few minutes, a few times a year — and no financial logins or account data ever leave your computer.
+            </p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4">
               <span class="font-semibold text-slate-900">What happens to my data?</span>
               <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
             </summary>
@@ -596,7 +740,7 @@
               <svg class="chev w-4 h-4 text-slate-500 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
             </summary>
             <p class="mt-3 text-slate-600 leading-relaxed">
-              The app keeps working. There are no servers it depends on — the only network call is the once-per-launch update check, and if that fails the app just continues. Your data lives in a local SQLite file you own, so nothing remote is required for the app to function — and your last paid copy keeps running indefinitely.
+              The app keeps working. There are no servers it depends on — the only network call is the once-per-launch update check, and if that fails the app just continues. Your data lives in a local SQLite file you own, so nothing remote is required for the app to function — and your copy keeps running indefinitely.
             </p>
           </details>
 
@@ -644,35 +788,93 @@
     </section>
   </main>
 
-  <!-- ───────── Footer ───────── -->
+  <!-- site:footer -->
   <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 justify-between">
-      <div class="flex items-center gap-2.5">
-        <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
-        <span class="font-bold tracking-tight">Retirology</span>
-        <span class="text-slate-500 text-sm">© 2026</span>
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 text-sm text-slate-600">
+        <div class="lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-2.5">
+            <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
+            <span class="font-bold tracking-tight text-slate-900">Retirology</span>
+          </a>
+          <p class="mt-3 leading-relaxed">Retirement and FIRE planning software for your desktop. Buy once, every update free.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Product</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="index.html#features" class="hover:text-slate-900">Features</a></li>
+            <li><a href="index.html#pricing" class="hover:text-slate-900">Pricing</a></li>
+            <li><a href="changelog.html" class="hover:text-slate-900">Changelog</a></li>
+            <li><a href="privacy.html" class="hover:text-slate-900">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Guides</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="guides/roth-conversion-ladder.html" class="hover:text-slate-900">Roth conversion ladder</a></li>
+            <li><a href="guides/aca-subsidy-cliff.html" class="hover:text-slate-900">ACA subsidy cliff</a></li>
+            <li><a href="guides/rule-of-55-vs-72t.html" class="hover:text-slate-900">Rule of 55 vs. 72(t)</a></li>
+            <li><a href="guides/monte-carlo-success-rate.html" class="hover:text-slate-900">Monte Carlo success rates</a></li>
+            <li><a href="guides/fi-number.html" class="hover:text-slate-900">Your FI number</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">State taxes</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="retirement-taxes/" class="hover:text-slate-900">All 50 states + DC</a></li>
+            <li><a href="retirement-taxes/california.html" class="hover:text-slate-900">California</a></li>
+            <li><a href="retirement-taxes/florida.html" class="hover:text-slate-900">Florida</a></li>
+            <li><a href="retirement-taxes/new-york.html" class="hover:text-slate-900">New York</a></li>
+            <li><a href="retirement-taxes/texas.html" class="hover:text-slate-900">Texas</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Compare</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="alternatives/" class="hover:text-slate-900">All alternatives</a></li>
+            <li><a href="alternatives/projectionlab.html" class="hover:text-slate-900">ProjectionLab</a></li>
+            <li><a href="alternatives/boldin.html" class="hover:text-slate-900">Boldin</a></li>
+            <li><a href="alternatives/maxifi.html" class="hover:text-slate-900">MaxiFi Planner</a></li>
+            <li><a href="mailto:contact@retirology.app" class="hover:text-slate-900">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600" aria-label="Footer">
-        <a href="privacy.html"   class="hover:text-slate-900">Privacy</a>
-        <a href="changelog.html" class="hover:text-slate-900">Changelog</a>
-        <a href="mailto:contact@retirology.app" class="hover:text-slate-900">Contact</a>
-      </nav>
-      </div>
-      <p class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500 leading-relaxed max-w-3xl">
-        Retirology is an educational tool. Nothing in the app or on this site is financial, tax, or legal advice — consult a licensed professional for your specific situation.
+      <p class="mt-10 pt-6 border-t border-slate-200 text-xs text-slate-500 leading-relaxed max-w-3xl">
+        © 2026 Retirology. Retirology is an educational tool. Nothing in the app or on this site is financial, tax, or legal advice — consult a licensed professional for your specific situation.
       </p>
     </div>
   </footer>
+  <!-- /site:footer -->
 
-  <!-- Respect prefers-reduced-motion: pause the hero video for users who've
-       told their OS they don't want movement. The poster image is what they
-       see instead — no telemetry, no third-party scripts. -->
+  <!-- Hero screenshots: crossfade every few seconds. Users who've asked
+       their OS for reduced motion keep the first image. No tracking. -->
   <script>
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      var v = document.getElementById('hero-video');
-      if (v) { v.removeAttribute('autoplay'); v.pause(); }
-    }
+    (function () {
+      var imgs = document.querySelectorAll('#hero-slides img');
+      if (imgs.length < 2) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var i = 0;
+      setInterval(function () {
+        if (document.hidden) return;
+        imgs[i].classList.remove('is-active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('is-active');
+      }, 4500);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is Retirology a subscription?", "acceptedAnswer": {"@type": "Answer", "text": "No. You pay once, from $19, and every update after that — patches, new features and the annual releases with refreshed tax tables — is free, forever."}},
+      {"@type": "Question", "name": "Does Retirology handle state taxes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All 50 states and DC under 2026 law, including retirement-income exclusions by age, how each state taxes Social Security, capital-gains breaks, and local income taxes such as New York City's."}},
+      {"@type": "Question", "name": "Does Retirology connect to my bank?", "acceptedAnswer": {"@type": "Answer", "text": "No, on purpose. You enter balances yourself and no financial logins or account data ever leave your computer."}},
+      {"@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": {"@type": "Answer", "text": "In a single SQLite file on your own computer. There are no accounts, no telemetry and no servers that hold your data."}},
+      {"@type": "Question", "name": "Which platforms does Retirology run on?", "acceptedAnswer": {"@type": "Answer", "text": "macOS (signed and notarized, Apple silicon and Intel), Windows and Linux."}}
+    ]
+  }
   </script>
 
 </body>

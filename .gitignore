@@ -7,3 +7,6 @@
 .idea/
 *.swp
 *~
+
+# Python bytecode from _build/
+__pycache__/
