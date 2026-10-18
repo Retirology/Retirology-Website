@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import glob
 import html
+import hashlib
 import json
 import re
 from datetime import date
@@ -122,6 +123,13 @@ def footer(root: str) -> str:
   </footer>"""
 
 
+def css_version(name: str) -> str:
+    """A short hash of a stylesheet, appended to its links. GitHub Pages lets
+    browsers cache CSS for 10 minutes, so without it a new page can render
+    with the previous stylesheet (2026-10-18: the homepage AI section)."""
+    return hashlib.sha256((SITE_DIR / "styles" / name).read_bytes()).hexdigest()[:10]
+
+
 def page(path: str, *, title: str, description: str, body: str, active: str = "",
          jsonld: list[dict] | None = None, og_type: str = "article") -> None:
     depth = path.count("/")
@@ -160,8 +168,8 @@ def page(path: str, *, title: str, description: str, body: str, active: str = ""
   <meta name="twitter:description" content="{esc(description)}" />
   <meta name="twitter:image" content="{OG_IMAGE}" />
 
-  <link rel="stylesheet" href="{root}styles/site.css" />
-  <link rel="stylesheet" href="{root}styles/custom.css" />
+  <link rel="stylesheet" href="{root}styles/site.css?v={css_version('site.css')}" />
+  <link rel="stylesheet" href="{root}styles/custom.css?v={css_version('custom.css')}" />
 {ld}
 </head>
 <body class="bg-white text-slate-900">
@@ -748,8 +756,8 @@ def sync_static_pages() -> None:
         p = SITE_DIR / name
         s = p.read_text()
         parts = {
-            "css": (f'  <link rel="stylesheet" href="{root}styles/site.css" />\n'
-                    f'  <link rel="stylesheet" href="{root}styles/custom.css" />'),
+            "css": (f'  <link rel="stylesheet" href="{root}styles/site.css?v={css_version("site.css")}" />\n'
+                    f'  <link rel="stylesheet" href="{root}styles/custom.css?v={css_version("custom.css")}" />'),
             "header": header(root),
             "footer": footer(root),
         }

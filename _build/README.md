@@ -6,8 +6,8 @@ that are then committed.
 
 ```bash
 # from Retirology_Website/
-../Retirology_App/backend/.venv/bin/python _build/build.py   # pages + sitemap
-node _build/build-css.mjs                                     # styles/site.css
+node _build/build-css.mjs                                     # styles/site.css — first,
+../Retirology_App/backend/.venv/bin/python _build/build.py   # pages + sitemap (they link to the CSS by its hash)
 ```
 
 Both need the app repo checked out next to this one (`../Retirology_App`):
