@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Connect Retirology to your AI app</title>
+  <meta name="description" content="Turn your Retirology beta access code into your connector address for Claude, ChatGPT or Gemini." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://retirology.app/ai-connect.html" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Connect Retirology to your AI app" />
+  <meta property="og:description" content="Retirology's planning engine inside your AI app. Free open beta." />
+  <meta property="og:url" content="https://retirology.app/ai-connect.html" />
+  <meta property="og:image" content="https://retirology.app/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://retirology.app/assets/og-image.png" />
+
+  <!-- site:css -->
+  <link rel="stylesheet" href="styles/site.css" />
+  <link rel="stylesheet" href="styles/custom.css" />
+  <!-- /site:css -->
+</head>
+<body class="bg-white text-slate-900">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded-md focus:shadow">Skip to content</a>
+
+  <!-- site:header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/85 border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Retirology home">
+        <img src="assets/logo.png" alt="" width="32" height="32" class="rounded-full" />
+        <span class="font-bold text-lg tracking-tight">Retirology</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700" aria-label="Primary">
+        <a href="index.html#features" class="hover:text-slate-900">Features</a>
+        <a href="retirement-taxes/" class="hover:text-slate-900">State taxes</a>
+        <a href="guides/" class="hover:text-slate-900">Guides</a>
+        <a href="alternatives/" class="hover:text-slate-900">Compare</a>
+        <a href="ai-beta.html" class="hover:text-slate-900">AI beta</a>
+        <a href="index.html#pricing" class="hover:text-slate-900">Pricing</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <details class="md:hidden relative">
+          <summary class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700">Menu</summary>
+          <nav class="absolute right-0 mt-2 w-48 rounded-xl border border-slate-200 bg-white p-2 text-sm font-medium text-slate-700 shadow-lg" aria-label="Mobile">
+          <a href="index.html#features" class="block rounded-md px-3 py-2 hover:bg-slate-100">Features</a>
+          <a href="retirement-taxes/" class="block rounded-md px-3 py-2 hover:bg-slate-100">State taxes</a>
+          <a href="guides/" class="block rounded-md px-3 py-2 hover:bg-slate-100">Guides</a>
+          <a href="alternatives/" class="block rounded-md px-3 py-2 hover:bg-slate-100">Compare</a>
+          <a href="ai-beta.html" class="block rounded-md px-3 py-2 hover:bg-slate-100">AI beta</a>
+          <a href="index.html#pricing" class="block rounded-md px-3 py-2 hover:bg-slate-100">Pricing</a>
+          </nav>
+        </details>
+        <a href="index.html#pricing" class="inline-flex items-center gap-1.5 rounded-lg btn-brand-gradient text-white text-sm font-semibold px-3.5 py-2 transition">
+          Buy
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- /site:header -->
+
+  <main id="main">
+    <section class="hero-halo">
+      <div class="mx-auto max-w-2xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16">
+        <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">Retirology for AI apps &middot; beta</p>
+        <h1 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Connect Retirology to your AI app</h1>
+        <p class="mt-4 text-slate-600">Paste the access code (license key) from your confirmation email. This page builds your connector address right here in your browser and sends your code nowhere.</p>
+
+        <label for="code" class="mt-8 block text-sm font-semibold text-slate-900">Access code</label>
+        <input id="code" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. 1A2B3C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D"
+               class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-green-600" />
+        <p id="bad" class="mt-2 hidden text-sm text-red-700">That doesn't look like an access code. Copy the whole license key from the email.</p>
+
+        <div id="out" class="mt-6 hidden rounded-xl border border-slate-200 bg-white p-4">
+          <p class="text-sm font-semibold text-slate-900">Your connector address</p>
+          <p id="url" class="mt-2 break-all rounded-md bg-slate-100 px-3 py-2 font-mono text-sm text-slate-800"></p>
+          <button id="copy" type="button" class="mt-3 inline-flex items-center rounded-lg btn-brand-gradient text-white text-sm font-semibold px-4 py-2">Copy address</button>
+          <span id="copied" class="ml-2 hidden text-sm text-brand-green">Copied</span>
+          <p class="mt-3 text-xs text-slate-500">It contains your access code, so keep it to yourself.</p>
+        </div>
+
+        <div class="mt-10 prose-rt">
+          <h2>Add it to your AI app</h2>
+          <ul>
+            <li><strong>Claude:</strong> Settings &rarr; Connectors &rarr; Add custom connector. Name it &ldquo;Retirology&rdquo; and paste the address.</li>
+            <li><strong>ChatGPT, Gemini and others:</strong> wherever the app lets you add a custom MCP connector or server, paste the same address.</li>
+          </ul>
+          <p>Then open a new chat and say: &ldquo;Help me set up my retirement plan with Retirology.&rdquo; More on what it can do: <a href="ai-beta.html">Retirology for AI apps</a>.</p>
+          <p>Stuck? Email <a href="mailto:contact@retirology.app?subject=AI%20beta">contact@retirology.app</a>.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      (function () {
+        var input = document.getElementById("code"), out = document.getElementById("out"), bad = document.getElementById("bad"),
+            url = document.getElementById("url"), copied = document.getElementById("copied");
+        function update() {
+          var code = input.value.trim();
+          var ok = /^[A-Za-z0-9-]{8,80}$/.test(code);
+          bad.classList.toggle("hidden", ok || code === "");
+          out.classList.toggle("hidden", !ok);
+          if (ok) url.textContent = "https://mcp.retirology.app/k/" + code + "/mcp";
+          copied.classList.add("hidden");
+        }
+        input.addEventListener("input", update);
+        document.getElementById("copy").addEventListener("click", function () {
+          navigator.clipboard.writeText(url.textContent).then(function () { copied.classList.remove("hidden"); });
+        });
+      })();
+    </script>
+  </main>
+
+  <!-- site:footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 text-sm text-slate-600">
+        <div class="lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-2.5">
+            <img src="assets/logo.png" alt="" width="28" height="28" class="rounded-full" />
+            <span class="font-bold tracking-tight text-slate-900">Retirology</span>
+          </a>
+          <p class="mt-3 leading-relaxed">Retirement and FIRE planning software for your desktop. Buy once, every update free.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Product</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="index.html#features" class="hover:text-slate-900">Features</a></li>
+            <li><a href="index.html#pricing" class="hover:text-slate-900">Pricing</a></li>
+            <li><a href="changelog.html" class="hover:text-slate-900">Changelog</a></li>
+            <li><a href="ai-beta.html" class="hover:text-slate-900">AI beta</a></li>
+            <li><a href="privacy.html" class="hover:text-slate-900">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Guides</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="guides/roth-conversion-ladder.html" class="hover:text-slate-900">Roth conversion ladder</a></li>
+            <li><a href="guides/aca-subsidy-cliff.html" class="hover:text-slate-900">ACA subsidy cliff</a></li>
+            <li><a href="guides/rule-of-55-vs-72t.html" class="hover:text-slate-900">Rule of 55 vs. 72(t)</a></li>
+            <li><a href="guides/monte-carlo-success-rate.html" class="hover:text-slate-900">Monte Carlo success rates</a></li>
+            <li><a href="guides/fi-number.html" class="hover:text-slate-900">Your FI number</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">State taxes</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="retirement-taxes/" class="hover:text-slate-900">All 50 states + DC</a></li>
+            <li><a href="retirement-taxes/california.html" class="hover:text-slate-900">California</a></li>
+            <li><a href="retirement-taxes/florida.html" class="hover:text-slate-900">Florida</a></li>
+            <li><a href="retirement-taxes/new-york.html" class="hover:text-slate-900">New York</a></li>
+            <li><a href="retirement-taxes/texas.html" class="hover:text-slate-900">Texas</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Compare</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="alternatives/" class="hover:text-slate-900">All alternatives</a></li>
+            <li><a href="alternatives/projectionlab.html" class="hover:text-slate-900">ProjectionLab</a></li>
+            <li><a href="alternatives/boldin.html" class="hover:text-slate-900">Boldin</a></li>
+            <li><a href="alternatives/maxifi.html" class="hover:text-slate-900">MaxiFi Planner</a></li>
+            <li><a href="mailto:contact@retirology.app" class="hover:text-slate-900">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-10 pt-6 border-t border-slate-200 text-xs text-slate-500 leading-relaxed max-w-3xl">
+        © 2026 Retirology. Retirology is an educational tool. Nothing in the app or on this site is financial, tax, or legal advice — consult a licensed professional for your specific situation.
+      </p>
+    </div>
+  </footer>
+  <!-- /site:footer -->
+
+</body>
+</html>

@@ -47,6 +47,7 @@ NAV = [
     ("State taxes", "retirement-taxes/", "taxes"),
     ("Guides", "guides/", "guides"),
     ("Compare", "alternatives/", "compare"),
+    ("AI beta", "ai-beta.html", "ai"),
     ("Pricing", "index.html#pricing", "pricing"),
 ]
 
@@ -109,7 +110,7 @@ def footer(root: str) -> str:
           </a>
           <p class="mt-3 leading-relaxed">Retirement and FIRE planning software for your desktop. Buy once, every update free.</p>
         </div>
-{col("Product", [("Features", "index.html#features"), ("Pricing", "index.html#pricing"), ("Changelog", "changelog.html"), ("Privacy", "privacy.html")])}
+{col("Product", [("Features", "index.html#features"), ("Pricing", "index.html#pricing"), ("Changelog", "changelog.html"), ("AI beta", "ai-beta.html"), ("Privacy", "privacy.html")])}
 {col("Guides", [("Roth conversion ladder", "guides/roth-conversion-ladder.html"), ("ACA subsidy cliff", "guides/aca-subsidy-cliff.html"), ("Rule of 55 vs. 72(t)", "guides/rule-of-55-vs-72t.html"), ("Monte Carlo success rates", "guides/monte-carlo-success-rate.html"), ("Your FI number", "guides/fi-number.html")])}
 {col("State taxes", [("All 50 states + DC", "retirement-taxes/"), ("California", "retirement-taxes/california.html"), ("Florida", "retirement-taxes/florida.html"), ("New York", "retirement-taxes/new-york.html"), ("Texas", "retirement-taxes/texas.html")])}
 {col("Compare", [("All alternatives", "alternatives/"), ("ProjectionLab", "alternatives/projectionlab.html"), ("Boldin", "alternatives/boldin.html"), ("MaxiFi Planner", "alternatives/maxifi.html"), ("Contact", "mailto:contact@retirology.app")]).replace(f'href="{root}mailto:', 'href="mailto:')}
@@ -737,7 +738,7 @@ def build_section(folder: str, section_name: str, active: str, hub_title: str, h
 # ──────────────────────── hand-written pages ────────────────────────
 
 STATIC_PAGES = {"index.html": "", "privacy.html": "", "changelog.html": "",
-                "download.html": "", "404.html": "/"}  # 404 is served at any depth
+                "download.html": "", "ai-beta.html": "", "ai-connect.html": "", "404.html": "/"}  # 404 is served at any depth
 
 
 def sync_static_pages() -> None:
@@ -767,7 +768,7 @@ def sync_static_pages() -> None:
 # ─────────────────────────────── sitemap ───────────────────────────────
 
 def build_sitemap() -> None:
-    static = [SITE, SITE + "privacy.html", SITE + "changelog.html"]
+    static = [SITE, SITE + "ai-beta.html", SITE + "privacy.html", SITE + "changelog.html"]
     urls = static + [u for u in SITEMAP if u not in static]
     body = "\n".join(
         f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{TODAY.isoformat()}</lastmod>\n  </url>" for u in urls
